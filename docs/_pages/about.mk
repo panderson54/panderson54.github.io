@@ -1,7 +1,8 @@
 ---
-layout: home
+layout: single
 author_profile: true
 permalink: /about/
 ---
 
-This is about me
+<head>About</head>
+{{This is about me}}
