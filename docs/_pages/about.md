@@ -1,8 +1,6 @@
 ---
-layout: single
-author_profile: true
+title: "About"
 permalink: /about/
 ---
 
 <head>About</head>
-{{This is about me}}
