@@ -108,9 +108,6 @@ author:
   location         : "Seattle"
   email            : "pmanderson54@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:pmanderson54@gmail.com"
     - label: "LinkedIn"
       icon: "fas fa-fw fa-link"
       url: "https://www.linkedin.com/in/patrick-anderson-b377796b/"
