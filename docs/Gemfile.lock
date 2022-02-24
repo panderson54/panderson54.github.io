@@ -134,8 +134,6 @@ GEM
       commonmarker (~> 0.17.6)
       jekyll-commonmark (~> 1.2)
       rouge (>= 2.0, < 4.0)
-    jekyll-data (1.1.1)
-      jekyll (>= 3.3, < 5.0.0)
     jekyll-default-layout (0.1.4)
       jekyll (~> 3.0)
     jekyll-feed (0.15.1)
@@ -232,13 +230,6 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
-    minimal-mistakes-jekyll (4.24.0)
-      jekyll (>= 3.7, < 5.0)
-      jekyll-feed (~> 0.1)
-      jekyll-gist (~> 1.5)
-      jekyll-include-cache (~> 0.1)
-      jekyll-paginate (~> 1.1)
-      jekyll-sitemap (~> 1.3)
     minitest (5.15.0)
     multipart-post (2.1.1)
     nokogiri (1.13.3-x64-mingw-ucrt)
@@ -287,15 +278,8 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
-  github-pages (~> 223)
-  jekyll-data
-  jekyll-feed (~> 0.12)
+  github-pages
   jekyll-include-cache
-  minima (~> 2.5)
-  minimal-mistakes-jekyll
-  tzinfo (~> 1.2)
-  tzinfo-data
-  wdm (~> 0.1.1)
 
 BUNDLED WITH
    2.3.7
