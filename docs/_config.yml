@@ -112,7 +112,7 @@ author:
       icon: "/assets/images/ln-icon.png"
       url: "https://www.linkedin.com/in/patrick-anderson-b377796b/"
     - label: "What I'm Reading"
-      icon: "fas fa-fw fa-link"
+      icon: "fas fa-solid fa-book"
       url: "https://www.goodreads.com/user/show/98246601-patrick-anderson"
     
 # Site Footer
