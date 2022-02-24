@@ -1,8 +1,8 @@
 ---
-title: "Hi, I'm Patrick."
-permalink: /about/
---- 
- 
+layout: post
+title:  "What's this all about?"
+---
+
 > "What is the last thing you taught yourself?"
 
 My wife mentioned that this was her new favorite question to ask during interviews. It's a great question and thinking about it had me going back over what I'd tried, under my own initiative, to learn over the past year. The answer doesn't need to be some serious or grand undertaking. Learning anything new is an achievement and the goal of the question is for the interviewee to teach the interviewer something, not to pass some arbitrary bar of scholarship.
