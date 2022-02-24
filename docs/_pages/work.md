@@ -2,7 +2,7 @@
 title: "Work"
 permalink: /work/
 ---
-I'm a software engineer at Meta, I've worked across Facebook and Instagram since 2018. In a previously life I was a fullstack .Net consultant in Colorado.
+I'm a software engineer at Meta, I've worked across Facebook and Instagram since 2018 and have been working as a fullstack engineer since 2014.
 
 ### Likes:
 - Strong typing 
