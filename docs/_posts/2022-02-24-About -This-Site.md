@@ -1,6 +1,10 @@
 ---
-layout: post
 title:  "What's this all about?"
+categories:
+  - Admin
+tags:
+  - about
+  - why
 ---
 
 > "What is the last thing you taught yourself?"
