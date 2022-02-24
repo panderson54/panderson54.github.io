@@ -104,13 +104,16 @@ analytics:
 author:
   name             : "Patrick Anderson"
   avatar           : "/assets/images/anon_profile.png"
-  bio              : "I am an **amazing** person."
+  bio              : "worlds *okayest* engineer"
   location         : "Seattle"
   email            : "pmanderson54@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:pmanderson54@gmail.com"
+      url: "mailto:pmanderson54@gmail.com"
+      - label: "Email"
+      icon: "fas fa-fw fa-linkedin-square"
+      url: "https://www.linkedin.com/in/patrick-anderson-b377796b/"
     
 # Site Footer
 footer:
