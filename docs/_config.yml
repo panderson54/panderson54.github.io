@@ -111,9 +111,6 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:pmanderson54@gmail.com"
-      - label: "Email"
-      icon: "fas fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/patrick-anderson-b377796b/"
     
 # Site Footer
 footer:
