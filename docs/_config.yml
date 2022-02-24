@@ -109,7 +109,7 @@ author:
   email            : "pmanderson54@gmail.com"
   links:
     - label: "LinkedIn"
-      icon: "fas fa-fw fa-link"
+      icon: "/assets/images/ln-icon.png"
       url: "https://www.linkedin.com/in/patrick-anderson-b377796b/"
     - label: "What I'm Reading"
       icon: "fas fa-fw fa-link"
