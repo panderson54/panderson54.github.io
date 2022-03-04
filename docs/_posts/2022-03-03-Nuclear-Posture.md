@@ -1,13 +1,14 @@
 ---
 title:  "Nuclear Posture: A nuclear noobs intro"
-header:
-  image: /assets/images/D5Banner.png
 categories:
   - Nuclear
 tags:
   - nuclear
   - armscontrol
 ---
+{% raw %}![alt]({{ site.url }}{{ site.baseurl }}/assets/images/D5Banner.png)
+{: .full}{% endraw %}
+
 Nukes are back in the news again as Vladimir Putin has ordered his tactical nuclear forces into a higher state of readiness. This came about after slower than expected progress made by Russian forces during their invasion of Ukraine and an increase in western sanctions and lethal support for the Ukrainian armed forces.
 
 Most people don't think very much about nuclear arms until they explode onto our headlines, seemingly at random, once or twice a year. Usually this is in the form of a North Korean test, or a new round of talks about the Iranian nuclear program. Luckily there exists a committed group of academics and experts, outside of a military or political apparatus, who do think about nuclear arms on a regular basis who we can learn from.  
