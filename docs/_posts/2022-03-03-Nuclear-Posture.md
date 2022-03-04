@@ -1,5 +1,6 @@
 ---
-title:  "Nuclear Posture: A nuclear noobs intro"header:
+title:  "Nuclear Posture: A nuclear noobs intro"
+header:
   image: /assets/images/D5Banner.png
 categories:
   - Nuclear
