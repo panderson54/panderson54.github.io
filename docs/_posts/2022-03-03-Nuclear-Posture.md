@@ -7,8 +7,7 @@ tags:
   - armscontrol
 ---
 
-![Banner](https://media.defense.gov/2020/Feb/13/2002248836/1920/1080/0/200212-N-EA818-1055.JPG)
-{: .full}
+![Banner](https://media.defense.gov/2020/Feb/13/2002248836/1920/1080/0/200212-N-EA818-1055.JPG){: .full}
 
 Nukes are back in the news again as Vladimir Putin has ordered his tactical nuclear forces into a higher state of readiness. This came about after slower than expected progress made by Russian forces during their invasion of Ukraine and an increase in western sanctions and lethal support for the Ukrainian armed forces.
 
