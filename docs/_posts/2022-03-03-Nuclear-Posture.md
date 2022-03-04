@@ -1,14 +1,12 @@
 ---
-title:  "Nuclear Posture: A nuclear noobs intro"
+title:  "Nuclear Posture: A nuclear noobs intro"header:
+  image: /assets/images/D5Banner.png
 categories:
   - Nuclear
 tags:
   - nuclear
   - armscontrol
 ---
-
-![Banner](https://media.defense.gov/2020/Feb/13/2002248836/1920/1080/0/200212-N-EA818-1055.JPG)
-
 Nukes are back in the news again as Vladimir Putin has ordered his tactical nuclear forces into a higher state of readiness. This came about after slower than expected progress made by Russian forces during their invasion of Ukraine and an increase in western sanctions and lethal support for the Ukrainian armed forces.
 
 Most people don't think very much about nuclear arms until they explode onto our headlines, seemingly at random, once or twice a year. Usually this is in the form of a North Korean test, or a new round of talks about the Iranian nuclear program. Luckily there exists a committed group of academics and experts, outside of a military or political apparatus, who do think about nuclear arms on a regular basis who we can learn from.  
@@ -120,7 +118,7 @@ Navigating our grid above we can see that this means that China has:
 * Survivable nuclear forces
 * Unambiguous capabilities with ambiguous deployment strategies
 
-Silo's are certainly not ambiguous deployments at first glance but the layout of the field, particularly the spacing (approx 3km) between silo's, indicates that this may be a shell game approach to missile basing. Not every silo needs a missile, but every silo would have to be destroyed in order to assure China couldn't strike back at an adversary. This aligns with current Chinese nuclear posture as these new silo's would be an unambiguous capability with an ambiguous deployment strategy. I subscribe to this view especially given China's relatively small arsenal of nuclear warheads which number around 350 in total ([Source](https://www.sipri.org/research/armament-and-disarmament/nuclear-disarmament-arms-control-and-non-proliferation/world-nuclear-forces)).
+Silos are certainly not ambiguous deployments at first glance but the layout of the field, particularly the spacing (approx 3km) between silos, indicates that this may be a shell game approach to missile basing. Not every silo needs a missile, but every silo would have to be destroyed in order to assure China couldn't strike back at an adversary. This aligns with current Chinese nuclear posture as these new silos would be an unambiguous capability with an ambiguous deployment strategy. I subscribe to this view especially given China's relatively small arsenal of nuclear warheads which number around 350 in total ([Source](https://www.sipri.org/research/armament-and-disarmament/nuclear-disarmament-arms-control-and-non-proliferation/world-nuclear-forces)).
 
 While building more ICBM silos certainly isn't a good thing by applying what we know about nuclear posture we can make a good argument that this is in fact not a drastic change from what China has been doing for decades and probably not cause for great alarm. 
 
