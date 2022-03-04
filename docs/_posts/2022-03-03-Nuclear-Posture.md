@@ -7,6 +7,9 @@ tags:
   - armscontrol
 ---
 
+![Banner](https://media.defense.gov/2020/Feb/13/2002248836/1920/1080/0/200212-N-EA818-1055.JPG)
+{: .full}
+
 Nukes are back in the news again as Vladimir Putin has ordered his tactical nuclear forces into a higher state of readiness. This came about after slower than expected progress made by Russian forces during their invasion of Ukraine and an increase in western sanctions and lethal support for the Ukrainian armed forces.
 
 Most people don't think very much about nuclear arms until they explode onto our headlines, seemingly at random, once or twice a year. Usually this is in the form of a North Korean test, or a new round of talks about the Iranian nuclear program. Luckily there exists a committed group of academics and experts, outside of a military or political apparatus, who do think about nuclear arms on a regular basis who we can learn from.  
@@ -54,7 +57,13 @@ Nuclear posture provides us a way to understand the deterrent capability of a na
 Types of nuclear posture:
 -------------------------
 
-IMAGE HERE
+
+|  | **Catalytic** | **Assured Retaliation**| **Asymmetric Escalation** |
+|:--------|:-------:|--------:|--------:|
+| **Capabilities** | Ability to assemble a small number of weapons. | Survivable second strike forces. | First use capabilities.  |
+| **Management** | Unknown/opaque | Assertive political control | Delegative (assets and authority and integrated into military forces)  |
+| **Transparency** | Ambiguous capability and deployment | Unambiguous capability,ambiguous deployment | Unambiguous capability and deployment |
+| **Employment** | Leverage possibility of nuclear breakout to get 3rd party intervention. | Certain nuclear retaliation after a serious attack. | Nuclear first use against conventional forces. |
 
 ### Catalytic: ###
 Catalytic states use the ambiguity of their nuclear capabilities and their position as a client state to a major power to get prompt intercession by said power on their behalf. Typically a catalytic nuclear force is shrouded in secrecy with the number, types and operability of their nuclear weapons left deliberately ambiguous. The goal of a catalytic posture is not to actually use nuclear weapons directly but rather to use the threat of nuclear escalation to bring a more powerful patron state into a conflict as a mediator, supporter or belligerent. 
@@ -90,7 +99,7 @@ How can we apply this today?
 ----------------------------
 Nuclear Posture can be a lens through which we interpret a state's actions and declarations surrounding its nuclear force. An example of this are the various interpretations of recent developments in China. In July 2021 new satellite imagery taken by Planet and analyzed by arms control experts from the James Martin Center for Nonproliferation Studies at the Middlebury Institute of International Studies at Monterey (CNS/MIIS) revealed 120 silos under construction by China's PLA Rocket Force ([Article](https://www.armscontrolwonk.com/archive/1212340/chinese-icbm-silos/)).
 
- ![Chinese ICBM Silos](https://www.armscontrolwonk.com/files/2021/07/Overview-1024x684.jpg)! 
+ ![Chinese ICBM Silos](https://www.armscontrolwonk.com/files/2021/07/Overview-1024x684.jpg)
  
  This represents a significant increase in the number of ICBM silos operated by China. On the surface building 100+ missile silos would seem to indicate an intent to threaten the would-be adversaries with a vast nuclear arsenal. Some pundits, lawmakers and observers were shocked by what they saw as a drastic and threatening move by China signaling a new more aggressive nuclear strategy to the west. 
 
