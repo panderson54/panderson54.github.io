@@ -2,13 +2,13 @@
 title:  "Nuclear Posture: A nuclear noobs intro"
 classes: wide
 categories:
-  - nuclear
+  - Nuclear
 tags:
   - nuclear
   - armscontrol
 ---
 ![D5 Launch]({{ site.url }}{{ site.baseurl }}/assets/images/d5_banner.png)
-
+How do nations think about nuclear weapons?
 
 Nukes are back in the news again as Vladimir Putin has ordered his tactical nuclear forces into a higher state of readiness. This came about after slower than expected progress made by Russian forces during their invasion of Ukraine and an increase in western sanctions as well as lethal support for the Ukrainian armed forces.
 
