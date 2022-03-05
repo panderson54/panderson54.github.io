@@ -1,6 +1,8 @@
 ---
 title:  "Nuclear Posture: A nuclear noobs intro"
 classes: wide
+categories:
+  - nuclear
 tags:
   - nuclear
   - armscontrol
@@ -71,7 +73,7 @@ Catalytic postures require a patron state to function and thus isn't operational
 ![South African nuclear bomb casings](https://upload.wikimedia.org/wikipedia/en/1/10/South_African_nuclear_bomb_casings.jpg){: .align-center}
 
 <sup>*Bomb casings at South Africa's abandoned nuclear bomb production facility near Pretoria, original source photojournalist Mungo Poore*<sup>
-{: style="text-align: left;"}
+{: style="text-align: center;"}
 
 **Examples:** Israel (pre-1990), South Africa
 
@@ -88,7 +90,7 @@ Assured retaliation is the most expensive posture listed here, it requires advan
 
 <sup>
 *Indian Arihant class balistic missile submarine, credit Zee News India*
-{: style="text-align: left;"}
+{: style="text-align: center;"}
 <sup>
 
 
