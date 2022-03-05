@@ -68,6 +68,9 @@ Catalytic states use the ambiguity of their nuclear capabilities and their posit
 
 Catalytic postures require a patron state to function and thus isn't operational for the higher rungs of the geopolitical ladder. Additionally catalytic postures are relatively cheap, you don't actually need to build an arsenal or complex systems for managing one, all you need is a few nukes and a friend in a high place. 
 
+![South African nuclear bomb casings](https://upload.wikimedia.org/wikipedia/en/1/10/South_African_nuclear_bomb_casings.jpg)
+*Bomb casings at South Africa's abandoned nuclear bomb production facility near Pretoria, original source photojournalist Mungo Poore*
+
 **Examples:** Israel (pre-1990), South Africa
 
 
@@ -78,6 +81,10 @@ States using this posture keep their arsenals under assertive political control.
 
 Assured retaliation is the most expensive posture listed here, it requires advanced technology and infrastructure such as long range missiles, ballistic missile submarines (SSBNs), hardened storage & launch facilities like underground silos, or movable missiles on gigantic transporter/launchers (TELs). Most importantly this system needs a reliable system for launching missiles by a central authority, this means planning, drills, hardened communication lines, means of authentication etc.. Any one of these items are a significant investment of both money and time, systems like long range missiles take decades to develop, and places assured retaliation out of reach for many nations. 
 
+
+ ![INS Arihant](https://english.cdn.zeenews.com/sites/default/files/2014/12/15/303178-arihant.jpg)
+*Indian Arihant class balistic missile submarine, credit Zee News India*
+
 **Examples:** China, India
 
 ### Asymmetric Escalation: ###
@@ -86,6 +93,10 @@ Asymmetric escalators threaten the use of nuclear weapons in response to any sig
 Asymmetric escalators prize speed over security of nuclear forces and delegate launch authority and assets to military commanders. Nuclear weapons must be able to be launched quickly and with little warning so their usage is built into military doctrine and their systems integrated into military forces. The tradeoff of this speed is safety, accidental launch is a greater risk in delegatory systems as the decision making is "farmed out" to more individuals. 
 
 From a cost perspective asymmetric escalation is somewhat of a middle ground. Nuclear weapons need to be produced in quantity and systems for using them on the battlefield must be developed and deployed but these are much cheaper than the more advanced and hardened systems for a second strike force. Additionally there more complex apparatus for command and control seen in assured retaliatory states isn't needed here. 
+
+
+ ![Pakistani TEL](https://www.defencetalk.com/wp-content/uploads/2009/05/pakistani-nuclear-arms-missile.jpg)
+*A Pakistani TEL (Transporter Erector Launcher), credit defencetalk.com*
 
 **Examples:** France, Pakistan, North Korea 
 
