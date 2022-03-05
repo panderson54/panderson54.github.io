@@ -1,14 +1,15 @@
 ---
 title:  "Nuclear Posture: A nuclear noobs intro"
+classes: wide
 header:
-  image: ../assets/images/D5Banner.png
+  image: ../assets/images/d5_banner.png
 categories:
   - Nuclear
 tags:
   - nuclear
   - armscontrol
 ---
-![D5 Launch](../assets/images/D5Banner.png)
+![D5 Launch](../assets/images/d5_banner.png)
 
 
 Nukes are back in the news again as Vladimir Putin has ordered his tactical nuclear forces into a higher state of readiness. This came about after slower than expected progress made by Russian forces during their invasion of Ukraine and an increase in western sanctions and lethal support for the Ukrainian armed forces.
