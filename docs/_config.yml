@@ -276,7 +276,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      wide: true
+      classes: wide
       read_time: true
       comments: false
       share: false
