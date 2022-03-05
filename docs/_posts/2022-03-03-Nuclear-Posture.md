@@ -1,9 +1,7 @@
 ---
 title:  "Nuclear Posture: A nuclear noobs intro"
 classes: wide
-excerpt: "What is nuclear posture? How can it be used to interpret current events?"
-header:
-  image: {{ site.url }}{{ site.baseurl }}/assets/images/d5_banner.png
+excerpt: "What is nuclear posture and how can it be used to interpret current events?"
 tags:
   - nuclear
   - armscontrol
