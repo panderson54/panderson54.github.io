@@ -70,7 +70,7 @@ Catalytic postures require a patron state to function and thus isn't operational
 
 ![South African nuclear bomb casings](https://upload.wikimedia.org/wikipedia/en/1/10/South_African_nuclear_bomb_casings.jpg){: .align-center}
 
-*Bomb casings at South Africa's abandoned nuclear bomb production facility near Pretoria, original source photojournalist Mungo Poore*
+<sup>*Bomb casings at South Africa's abandoned nuclear bomb production facility near Pretoria, original source photojournalist Mungo Poore*<sup>
 
 **Examples:** Israel (pre-1990), South Africa
 
@@ -84,7 +84,8 @@ Assured retaliation is the most expensive posture listed here, it requires advan
 
 
 ![INS Arihant](https://english.cdn.zeenews.com/sites/default/files/2014/12/15/303178-arihant.jpg){: .align-center}
-[^*Indian Arihant class balistic missile submarine, credit Zee News India*]
+
+<sup>*Indian Arihant class balistic missile submarine, credit Zee News India*<sup>
 
 **Examples:** China, India
 
@@ -97,7 +98,8 @@ From a cost perspective asymmetric escalation is somewhat of a middle ground. Nu
 
 
 ![Pakistani TEL](https://www.defencetalk.com/wp-content/uploads/2009/05/pakistani-nuclear-arms-missile.jpg){: .align-center}
-*A Pakistani TEL (Transporter Erector Launcher), credit defencetalk.com*
+
+<sup>*A Pakistani TEL (Transporter Erector Launcher), credit defencetalk.com*<sup>
 
 **Examples:** France, Pakistan, North Korea 
 
