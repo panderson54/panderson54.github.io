@@ -1,6 +1,8 @@
 ---
 title:  "Nuclear Posture: A nuclear noobs intro"
 classes: wide
+excerpt: "What is nuclear posture? How can it be used to interpret current events?"
+teaser: {{ site.url }}{{ site.baseurl }}/assets/images/d5_banner.png
 categories:
   - nuclear
 tags:
@@ -34,7 +36,7 @@ Cool, so where do we start?
 What is Nuclear Posture:
 =======================
 
-I want to start here because it's relevant to current events and frankly I need to start somewhere. What is nuclear posture? How can it be used to evaluate current events?  Let's start by defining the term. For this post I am going to rely on Dr. Vipin Narang's Optimization Theory of Nuclear Posture.
+I want to start here because it's relevant to current events and frankly I need to start somewhere. What is nuclear posture? How can it be used to interpret current events?  Let's start by defining the term. For this post I am going to rely on Dr. Vipin Narang's Optimization Theory of Nuclear Posture.
 
 >"Nuclear posture is the incorporation of some number and type of nuclear warheads and delivery vehicles, the state's overall military structure, the rules and procedures governing how those weapons are deployed, when and under what conditions they might be used, against what targets, and who has the authority to make those decisions. Nuclear posture is best thought of as the operational, rather than the declaratory, nuclear doctrine of a country; while the two can overlap, it is the operational doctrine that generates deterrent power against an opponent." 
 
@@ -124,7 +126,7 @@ Nuclear Posture can be a lens through which we interpret a state's actions and d
 
 <sup>*120 silos under construction in Yumen, China. Credit Planet & James Martin Center for Nonproliferation Studies*<sup>
  {: style="text-align: center;"}
- 
+
  This represents a significant increase in the number of ICBM silos operated by China. On the surface building 100+ missile silos would seem to indicate an intent to threaten the would-be adversaries with a vast nuclear arsenal. Some pundits, lawmakers and observers were shocked by what they saw as a drastic and threatening move by China signaling a new more aggressive nuclear strategy to the west. 
 
 >"Nicholas Burns, the Biden administration's nominee to be US Ambassador to China, said during his confirmation hearing last month that the Chinese "are blasting past that definition (of a minimum nuclear deterrent), and they're rapidly engaged in the buildup of their nuclear arsenal, including the disturbing reports of the hypersonic technology."
