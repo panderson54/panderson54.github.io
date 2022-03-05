@@ -70,7 +70,8 @@ Catalytic postures require a patron state to function and thus isn't operational
 
 ![South African nuclear bomb casings](https://upload.wikimedia.org/wikipedia/en/1/10/South_African_nuclear_bomb_casings.jpg){: .align-center}
 
-<sup>*Bomb casings at South Africa's abandoned nuclear bomb production facility near Pretoria, original source photojournalist Mungo Poore* {: style="text-align: center;"}<sup>
+<sup>*Bomb casings at South Africa's abandoned nuclear bomb production facility near Pretoria, original source photojournalist Mungo Poore*<sup>
+{: style="text-align: center;"}
 
 **Examples:** Israel (pre-1990), South Africa
 
@@ -85,7 +86,8 @@ Assured retaliation is the most expensive posture listed here, it requires advan
 
 ![INS Arihant](https://english.cdn.zeenews.com/sites/default/files/2014/12/15/303178-arihant.jpg){: .align-center}
 
-<sup>*Indian Arihant class balistic missile submarine, credit Zee News India* {: style="text-align: center;"}<sup>
+<sup>*Indian Arihant class balistic missile submarine, credit Zee News India*<sup>
+{: style="text-align: center;"}
 
 **Examples:** China, India
 
@@ -99,7 +101,8 @@ From a cost perspective asymmetric escalation is somewhat of a middle ground. Nu
 
 ![Pakistani TEL](https://www.defencetalk.com/wp-content/uploads/2009/05/pakistani-nuclear-arms-missile.jpg){: .align-center}
 
-<sup>*A Pakistani TEL (Transporter Erector Launcher), credit defencetalk.com* {: style="text-align: center;"}<sup>
+<sup>*A Pakistani TEL (Transporter Erector Launcher), credit defencetalk.com*<sup>
+{: style="text-align: center;"}
 
 **Examples:** France, Pakistan, North Korea 
 
@@ -114,7 +117,8 @@ Nuclear Posture can be a lens through which we interpret a state's actions and d
  ![Chinese ICBM Silos](https://www.armscontrolwonk.com/files/2021/07/Overview-1024x684.jpg)
  
 
-<sup>*120 silos under construction in Yumen, China. Credit Planet & James Martin Center for Nonproliferation Studies* {: style="text-align: center;"}<sup>
+<sup>*120 silos under construction in Yumen, China. Credit Planet & James Martin Center for Nonproliferation Studies*<sup>
+{: style="text-align: center;"}
  
  This represents a significant increase in the number of ICBM silos operated by China. On the surface building 100+ missile silos would seem to indicate an intent to threaten the would-be adversaries with a vast nuclear arsenal. Some pundits, lawmakers and observers were shocked by what they saw as a drastic and threatening move by China signaling a new more aggressive nuclear strategy to the west. 
 
@@ -141,3 +145,15 @@ Silos are certainly not ambiguous deployments at first glance but the layout of 
 While building more ICBM silos certainly isn't a good thing by applying what we know about nuclear posture we can make a good argument that this is in fact not a drastic change from what China has been doing for decades and probably not cause for great alarm. 
 
 For further reading on the history and thinking behind Chinese nuclear forces I highly recommend *Paper Tigers: China's Nuclear Posture* by Dr. Jeffery Lewis. 
+
+Hopefully this was relatively understandable, I'll return to the subject of nuclear weapons in the near future. If you want to talk with other amateur (and some professional) arms control nerds come join an awesome OSINT community at the Arms Control Wonk slack channel. If you are interested in this stuff and want to hear from the actual experts I can highly recommend the following podcasts:
+
+* [The Arms Control Wonk Podcast](https://www.armscontrolwonk.com/archive/author/podcast/)
+* [The Diplomat: Asian Geopolitcs Podcast](https://podcasts.apple.com/us/podcast/the-diplomat-asia-geopolitics/id852773346)
+* [The Chain Reaction Podcast from FPRI](https://www.fpri.org/research/nationalsecurity/chain-reaction/)
+* [At The Brink Podcast from the William J Perry Project](https://atthebrink.org/)
+
+
+Books Mentioned in this post:
+* [Paper Tigers: China's Nuclear Posture by Jeffery Lewis ](https://www.goodreads.com/en/book/show/23989461)
+* [Nuclear Strategy in the Modern Era by Vipin Narang](https://www.goodreads.com/book/show/18730641-nuclear-strategy-in-the-modern-era)
