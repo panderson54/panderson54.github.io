@@ -70,8 +70,7 @@ Catalytic postures require a patron state to function and thus isn't operational
 
 ![South African nuclear bomb casings](https://upload.wikimedia.org/wikipedia/en/1/10/South_African_nuclear_bomb_casings.jpg){: .align-center}
 
-<sup>*Bomb casings at South Africa's abandoned nuclear bomb production facility near Pretoria, original source photojournalist Mungo Poore*<sup>
-{: style="text-align: center;"}
+<center><sup>*Bomb casings at South Africa's abandoned nuclear bomb production facility near Pretoria, original source photojournalist Mungo Poore*<sup></center>
 
 **Examples:** Israel (pre-1990), South Africa
 
@@ -86,8 +85,8 @@ Assured retaliation is the most expensive posture listed here, it requires advan
 
 ![INS Arihant](https://english.cdn.zeenews.com/sites/default/files/2014/12/15/303178-arihant.jpg){: .align-center}
 
-<sup>*Indian Arihant class balistic missile submarine, credit Zee News India*<sup>
-{: style="text-align: center;"}
+<center><sup>*Indian Arihant class balistic missile submarine, credit Zee News India*<sup></center>
+
 
 **Examples:** China, India
 
@@ -101,8 +100,7 @@ From a cost perspective asymmetric escalation is somewhat of a middle ground. Nu
 
 ![Pakistani TEL](https://www.defencetalk.com/wp-content/uploads/2009/05/pakistani-nuclear-arms-missile.jpg){: .align-center}
 
-<sup>*A Pakistani TEL (Transporter Erector Launcher), credit defencetalk.com*<sup>
-{: style="text-align: center;"}
+<center><sup>*A Pakistani TEL (Transporter Erector Launcher), credit defencetalk.com*<sup></center>
 
 **Examples:** France, Pakistan, North Korea 
 
@@ -117,8 +115,7 @@ Nuclear Posture can be a lens through which we interpret a state's actions and d
  ![Chinese ICBM Silos](https://www.armscontrolwonk.com/files/2021/07/Overview-1024x684.jpg)
  
 
-<sup>*120 silos under construction in Yumen, China. Credit Planet & James Martin Center for Nonproliferation Studies*<sup>
-{: style="text-align: center;"}
+<center><sup>*120 silos under construction in Yumen, China. Credit Planet & James Martin Center for Nonproliferation Studies*<sup></center>
  
  This represents a significant increase in the number of ICBM silos operated by China. On the surface building 100+ missile silos would seem to indicate an intent to threaten the would-be adversaries with a vast nuclear arsenal. Some pundits, lawmakers and observers were shocked by what they saw as a drastic and threatening move by China signaling a new more aggressive nuclear strategy to the west. 
 
