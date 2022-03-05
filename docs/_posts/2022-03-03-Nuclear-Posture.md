@@ -107,6 +107,7 @@ From a cost perspective asymmetric escalation is somewhat of a middle ground. Nu
 ![Pakistani TEL](https://www.defencetalk.com/wp-content/uploads/2009/05/pakistani-nuclear-arms-missile.jpg){: .align-center}
 
 <sup>*A Pakistani TEL (Transporter Erector Launcher), credit defencetalk.com*<sup>
+{: style="text-align: center;"}
 
 **Examples:** France, Pakistan, North Korea 
 
@@ -122,6 +123,7 @@ Nuclear Posture can be a lens through which we interpret a state's actions and d
  
 
 <sup>*120 silos under construction in Yumen, China. Credit Planet & James Martin Center for Nonproliferation Studies*<sup>
+ {: style="text-align: center;"}
  
  This represents a significant increase in the number of ICBM silos operated by China. On the surface building 100+ missile silos would seem to indicate an intent to threaten the would-be adversaries with a vast nuclear arsenal. Some pundits, lawmakers and observers were shocked by what they saw as a drastic and threatening move by China signaling a new more aggressive nuclear strategy to the west. 
 
