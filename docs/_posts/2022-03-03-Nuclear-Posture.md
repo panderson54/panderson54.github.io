@@ -1,8 +1,6 @@
 ---
 title:  "Nuclear Posture: A nuclear noobs intro"
 classes: wide
-header:
-  teaser: {{ site.url }}{{ site.baseurl }}/assets/images/d5_banner.png
 categories:
   - nuclear
 tags:
