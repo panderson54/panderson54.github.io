@@ -64,6 +64,7 @@ Types of nuclear posture:
 | **Management** | Unknown/opaque | Assertive political control | Delegative (assets and authority and integrated into military forces)  |
 | **Transparency** | Ambiguous capability and deployment | Unambiguous capability,ambiguous deployment | Unambiguous capability and deployment |
 | **Employment** | Leverage possibility of nuclear breakout to get 3rd party intervention. | Certain nuclear retaliation after a serious attack. | Nuclear first use against conventional forces. |
+
 <sup>Table credit *Vipin Narang, Nuclear Strategy in the Modern Era*<sup>
 {: style="text-align: center;"}
 
