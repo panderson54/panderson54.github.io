@@ -14,7 +14,7 @@ Nukes are back in the news again as Vladimir Putin has ordered his tactical nucl
 
 Most people don't think very much about nuclear arms until they explode onto our headlines, seemingly at random, once or twice a year. Usually this is in the form of a North Korean test, or a new round of talks about the Iranian nuclear program. Luckily there exists a committed group of academics and experts, outside of a military or political apparatus, who do think about nuclear arms on a regular basis who we can learn from.  
 
-I want to write a series of posts for lay people by a lay person to talk about some of the different facets of the field in slightly more complexity, and hopefully with more competency, than your local news broadcast. 
+I want to write a series of posts for lay people, by a lay person, to talk about some of the different facets of the field in slightly more complexity, and hopefully with more competency, than your local news broadcast. 
 
 
 A couple of ground rules:
@@ -48,7 +48,7 @@ Nuclear posture is the combination of:
 
 Additionally Dr. Narang notes that a nuclear posture and what a nation or government says about how it will use its nuclear weapons (aka declaratory nuclear doctrine) can be different. For example, proclaiming to your coworkers that you are going to ride a bike to work is a declaratory doctrine. The fact that you neither own or know how to ride a bike would indicate that your operational doctrine is in fact going to be car based. 
 
-The difference between these two is important and the effects of this gap are observable. North Korea's declaration that it will use its nuclear arsenal against targets in the US doesn't provide the same deterrent power as the same threat from Russia. The difference here is that Russia has a nuclear posture capable of making good on that threat, they have missiles capable of reaching the US, warheads that can survive the trip, and a reliable system for ordering the launch. On the other side there are questions about the reliability of North Korea ICBMs, their ability to make a small enough nuke and if their warhead would survive reentry into the earth atmosphere. In Dr. Narang's words:
+The difference between these two is important and the effects of this gap are observable. North Korea's declaration that it will use its nuclear arsenal against targets in the US doesn't provide the same deterrent power as the same threat from Russia. The difference here is that Russia has a nuclear posture capable of making good on that threat, they have missiles capable of reaching the US, warheads that can survive the trip, and a reliable system for ordering the launch. On the other side there are questions about the reliability of North Korea ICBMs, their ability to make a small enough nuke, and if their warhead would survive reentry. In Dr. Narang's words:
 
 >"To put it bluntly, states care more about what an adversary can credibly do with its nuclear weapons than what it says about them." 
 
@@ -64,6 +64,7 @@ Types of nuclear posture:
 | **Management** | Unknown/opaque | Assertive political control | Delegative (assets and authority and integrated into military forces)  |
 | **Transparency** | Ambiguous capability and deployment | Unambiguous capability,ambiguous deployment | Unambiguous capability and deployment |
 | **Employment** | Leverage possibility of nuclear breakout to get 3rd party intervention. | Certain nuclear retaliation after a serious attack. | Nuclear first use against conventional forces. |
+| **Cost** | $ | $$$ | $$ |
 
 <sup>Table credit *Vipin Narang, Nuclear Strategy in the Modern Era*<sup>
 {: style="text-align: center;"}
@@ -134,11 +135,11 @@ Nuclear Posture can be a lens through which we interpret a state's actions and d
 
 \- [CNN A change in China's approach?](https://www.cnn.com/2021/11/02/politics/china-suspected-silo-fields-report/index.html)
 
-However when looking at this development through the lens of Chinese nuclear posture we can come to a different conclusion as to why these silo's might be built. 
+However when looking at this development through the lens of Chinese nuclear posture we can come to a different conclusion as to why these silos might be built. 
 
 Chinese declared nuclear posture is that of assured retaliation:
 
->"The most recent Defense White Paper, alongside some Chinese texts, makes clear that CHina plans on using alert levels to signal resolve. 'If China comes under a nuclear threat' the 2013 paper states, 'nuclear missile force will act upon the orders of the [Central Military Commission], go into higher level of readiness, and get ready for a nuclear counterattack to deter the enemy from using nuclear weapons against China.' "
+>"The most recent Defense White Paper, alongside some Chinese texts, makes clear that China plans on using alert levels to signal resolve. 'If China comes under a nuclear threat' the 2013 paper states, 'nuclear missile force will act upon the orders of the [Central Military Commission], go into higher level of readiness, and get ready for a nuclear counterattack to deter the enemy from using nuclear weapons against China.' "
 
 \- *Paper Tigers: China's Nuclear Posture* by Jeffery Lewis 
 
