@@ -21,9 +21,9 @@ A couple of ground rules:
 
 * Complexity isn't to be shunned & ambiguity isn't a failing. Hard problems often don't present absolute answers, this holds for the subject of nuclear arms.
  
-* I will be pulling from the far deeper work of the academics and thinkers in this field, all sources will be cited
+* I will be pulling from the far deeper work of the academics and thinkers in this field, all sources will be cited.
 
-* I am open to being wrong in my interpretations. I don't understand this subject as well as many, many other people.
+* I am open to being wrong in my interpretations. I don't understand this subject as well as many other people.
 
 * I will try and use, as well as explain, the language used by experts in this field. Words have specific meanings in highly technical subjects. Sticking to those meanings and explaining them is better than reducing their precision by translating terminology into more common wording.
 
