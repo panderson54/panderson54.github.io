@@ -38,7 +38,7 @@ I want to start here because it's relevant to current events and frankly I need 
 
 >"Nuclear posture is the incorporation of some number and type of nuclear warheads and delivery vehicles, the state's overall military structure, the rules and procedures governing how those weapons are deployed, when and under what conditions they might be used, against what targets, and who has the authority to make those decisions. Nuclear posture is best thought of as the operational, rather than the declaratory, nuclear doctrine of a country; while the two can overlap, it is the operational doctrine that generates deterrent power against an opponent." 
 
-\- *Vipin Narang Nuclear Strategy in the Modern Era*
+\- *Vipin Narang, Nuclear Strategy in the Modern Era*
 
 That's a lot of jargon right out of the gate, let's try and reduce this very technical definition to its core components.
 
@@ -64,6 +64,8 @@ Types of nuclear posture:
 | **Management** | Unknown/opaque | Assertive political control | Delegative (assets and authority and integrated into military forces)  |
 | **Transparency** | Ambiguous capability and deployment | Unambiguous capability,ambiguous deployment | Unambiguous capability and deployment |
 | **Employment** | Leverage possibility of nuclear breakout to get 3rd party intervention. | Certain nuclear retaliation after a serious attack. | Nuclear first use against conventional forces. |
+<sup>Table credit *Vipin Narang, Nuclear Strategy in the Modern Era*<sup>
+{: style="text-align: center;"}
 
 ### Catalytic: ###
 Catalytic states use the ambiguity of their nuclear capabilities and their position as a client state to a major power to get prompt intercession by said power on their behalf. Typically a catalytic nuclear force is shrouded in secrecy with the number, types and operability of their nuclear weapons left deliberately ambiguous. The goal of a catalytic posture is not to actually use nuclear weapons directly but rather to use the threat of nuclear escalation to bring a more powerful patron state into a conflict as a mediator, supporter or belligerent. 
