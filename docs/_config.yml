@@ -97,7 +97,7 @@ analytics:
   provider               : "google-gtag"
   google:
     tracking_id          : "G-HLPGXRV0MF"
-    anonymize_ip         : # true, false (default)
+    anonymize_ip         : false
 
 
 # Site Author
