@@ -2,7 +2,6 @@
 title:  "Blockchain skepticism isn't being a Luddite: Part 1"
 classes: wide
 categories:
-  - cryptography
   - software
 tags:
   - cryptography
