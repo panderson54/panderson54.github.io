@@ -8,7 +8,7 @@ tags:
   - blockchain
   - software
 ---
-
+![Git History Banner]({{ site.url }}{{ site.baseurl }}/assets/images/githistory.png)
 I'm not a blockchain guy. Having written that in the immutable ink of the internet I can have it forever held against me when we all eventually upload our collective consciousness onto the great ledger in the sky. Criticism, skepticism, or even gentle probing of the relevance of blockchain technologies in all facets of life is typically met with a mixture of shock and pity by its evangelists. That said I am not alone in my skepticism and there is a growing counter weight to the "common knowledge" that the blockchain will revolutionize everything.
 
 I wanted to write down some of my thoughts on the facts, as I understand them, of distributed ledger tech and draw some conclusions. Unlike when writing about nukes, on this subject I don't have the shield of amateurism to protect me from my hot takes. I have a degree in computer science, I have been a professional software engineer for 8 years, and I should be generally better equipped than the average person off the street to understand these topics. If you disagree with my conclusions, do it with the happy knowledge that I should have known better. 
