@@ -92,7 +92,6 @@ In short, in order to insert a fraudulent transaction into the blockchain the fr
 Finally here is a summary of the entire trust workflow from the Bitcoin whitepaper:
 
 >"The steps to run the network are as follows: 
-
 1) New transactions are broadcast to all nodes.
 2) Each node collects new transactions into a block. 
 3) Each node works on finding a difficult proof-of-work for its block. 
