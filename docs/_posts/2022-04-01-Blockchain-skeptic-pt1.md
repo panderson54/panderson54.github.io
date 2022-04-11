@@ -14,13 +14,15 @@ I'm not a blockchain guy. Having written that in the immutable ink of the intern
 
 I wanted to write down some of my thoughts on the facts, as I understand them, of distributed ledger tech and draw some conclusions. Unlike when writing about nukes, on this subject I don't have the shield of amateurism to protect me from my hot takes. I have a degree in computer science, I have been a professional software engineer for 8 years, and I should be generally better equipped than the average person off the street to understand these topics. If you disagree with my conclusions, do it with the happy knowledge that I should have known better. 
 
-I am going to write this with the goal of being both accurate and understandable. That said accuracy means we are not going to gloss over some of the underlying computer science or cryptographic underpinnings of these systems. What's happening under the hood is what drives much of my skepticism. I'll try and quickly define relevant concepts but some tangential items are beyond our scope.
+I am going to write this with the goal of being both accurate and understandable. That said accuracy means we are not going to gloss over some of the underlying computer science or cryptographic underpinnings of these systems. What's happening under the hood is what drives much of my skepticism. I'll try and quickly define relevant concepts but some tangential items are beyond our scope. 
+
+Caveat: I am aware that there are blockchain implementations that are not distributed (ie Git is basically on a blockchain) but the common vernacular has conflated the term blockchain with crpytocurrencies and distributed ledgers so that is the terminology I am using.
 
 
 What is a Blockchain?
 =====================
 
-A Blockchain is a distributed ledger. Ledgers keep a chronological record of transactions between accounts, it's a concept as old as writing and ancient ledgers can give us fascinating glimpse into how people in the past lived. To put it obviously a blockchain is, as it sounds, a chain of blocks. Each block contains some data and a reference to the previous block in the chain. If you've studied computer science we have a name for this structure, it's called a linked list. 
+A blockchain, for the purposes of this discussion, is a distributed ledger. Ledgers keep a chronological record of transactions between accounts, it's a concept as old as writing and ancient ledgers can give us fascinating glimpse into how people in the past lived. To put it obviously a blockchain is, as it sounds, a chain of blocks. Each block contains some data and a reference to the previous block in the chain. If you've studied computer science we have a name for this structure, it's called a linked list. 
 
 ![Linked List Diagram]({{ site.url }}{{ site.baseurl }}/assets/images/linkedlist.png)
 
@@ -52,7 +54,7 @@ U.S.
 2c76193c4ead6909afa629eda14e6d176dfddfdbb0ebad58c68dcbc8e14a19b4
 ~~~
 
-Second we have the data of the current block, for Bitcoin this contains a list of transactions that are to be added to the ledger. Alice gives Bob 10 coins, Bob gives Kelly 2 coins etc.. Before being added to the ledger these transactions have to be validated, Alice can't give Bob 10 coins they don't have. Transaction validation is done by checking against previous 
+Second we have the data of the current block, for Bitcoin this contains a list of transactions that are to be added to the ledger. Alice gives Bob 10 coins, Bob gives Kelly 2 coins etc.. Before being added to the ledger these transactions have to be validated, Alice can't give Bob 10 coins they don't have.
 
 Finally we have a nonce and the target hash. A nonce is a "Number Used Once", they are arbitrary numbers used a single time in cryptography. The target hash is a number (in hexadecimal) that the resulting hash of the block must be lower than. In blockchain's that use a proof of work system (like Bitcoin) the nonce combined with the target hash are the underpinning of the entire system. 
 
@@ -64,7 +66,7 @@ The integrity of the Bitcoin blockchain relies on an idea called "proof of work"
 
 \- *Bitcoin: A Peer-to-Peer Electronic Cash System*
 
-The idea is that the effort required to add a new block containing a fraudulent transaction to the chain and then to keep adding new blocks such that your fraudulent transaction is on the longest chain is prohibitive. The work in this case is artificial, the actual validation of transactions is relatively trivial for a computer.
+The idea is that the effort required to add a new block containing a fraudulent transaction to the chain and then to keep adding new blocks, such that your fraudulent transaction is on the longest chain, is prohibitive. The work in this case is artificial, the actual validation of transactions is relatively trivial for a computer.
 
 >"The proof-of-work involves scanning for a value that when hashed, such as with SHA-256, the hash begins with a number of zero bits. The average work required is exponential in the number of zero bits required and can be verified by executing a single hash."
 
@@ -86,9 +88,9 @@ Using a rough hashrate (this number depends on a lot of factors) for my computer
 ((((27,452,707,696,466 * 2^32) / (30,000,000)) /60) /60)/8760 =  124,628,447.64 years
 ~~~
 
-It's important to remember that the number is years of computer work and that number has real world costs attached to it in terms of power consumption and hardware. Additionally difficulty is adjusted by the network every 2 weeks such that time = 10m/block, as more computing power works on the chain the difficulty must increase in order to keep the rate at 10m per block added.
+It's important to remember that the number is "years of computer work" and that number has real world costs attached to it in terms of power consumption and hardware. In reality this workload is spread across all computers on the network but the sum total of their efforts in a worst case scenario will be the same as above. Additionally difficulty is adjusted by the network every 2 weeks such that time = 10m/block, as more computing power works on the chain the difficulty must increase in order to keep the rate at 10m per block added.
 
-In short, in order to insert a fraudulent transaction into the blockchain the fraudster not only needs to be faster than every other validator they need to keep being faster in order to maintain the longest chain. Unless a single entity controls > 50% of the computing power on a chain the blockchain should be secure. This is so incredibly difficult to do that the longest chain can be trusted based on the mathematical likelihood of its validity. 
+In short, in order to insert a fraudulent transaction into the blockchain the fraudster not only needs to be faster than every other validator they need to keep being faster in order to maintain the longest chain. Unless a single entity controls > 50% of the computing power on a chain the ledger should be secure. This is so incredibly difficult to do that the longest chain can be trusted based on the mathematical likelihood of its validity. 
 
 Finally here is a summary of the entire trust workflow from the Bitcoin whitepaper:
 
@@ -110,20 +112,20 @@ We've established a few facts above:
 * Distributed ledgers require many nodes working together to be secure
 * There are real world monetary costs to finding a valid hash
 
-The question you should be asking is why would anyone want to run a node in this set up if it's going to consume power (and therefore money) and hardware to do so? The answer is that the first node that finds a valid hash gets to add one last transaction to the block, this is a bounty for validating the block and grants a coin to the validator. This is where the term "mining" comes from, new coins are mined/created every time a block is added to the chain as an incentive for people to run a node (or many nodes). 
+The question you should be asking is why would anyone want to run a node in this set up if it's going to consume power (and therefore money) and hardware to do so? The answer is that the first node that finds a valid hash gets to add one last transaction to the block, this is a bounty for validating the block and grants a reward to the validator. This is where the term "mining" comes from, new coins are mined/created every time a block is added to the chain as an incentive for people to run a node (or many nodes). 
 
-So we've arrived at cryptocurrencies. A cryptocurrency is the incentive for individuals to contribute to the blockchain.
+So we've arrived at cryptocurrencies. A cryptocurrency is the incentive for individuals to contribute computing power to the ledger.
 
 Wrapping up:
 =============
 
-There are a lot of things I've not even touched on such as:
+There are a lot of things I've not touched on such as:
 * How difficulty is set and adjusted
 * Nodes and how they coordinate/communicate
 * How transactions are conducted and validated
 * How data is stored and accessed on the chain
 * Extra nonce and other steps for generating an valid hash aside from the nonce 
-* There are other systems of trust used in other blockchains like proof of stake 
+* There are other systems of trust used in other distributed ledgers like proof of stake 
 * Privacy
 etc..
 
