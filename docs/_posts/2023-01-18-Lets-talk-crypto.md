@@ -90,7 +90,7 @@ What we know about encryption so far is that keeping a key secret is the most im
 * Two parties establish a shared key independently prior to sending information that needs to be secured.
 * Everyone brings their own lock and their own key
 
-The solution to both of these comes down to math. There is a mathematical concept called a one-way function, this is a function that is very easy to compute in one direction and very difficult to invert. Given the output of one of these functions you are (practically) unable to determine what the inputs are.* 
+The solution to both of these comes down to math. There is a mathematical concept called a one-way function, this is a function that is very easy to compute in one direction and very difficult to invert. Given the output of one of these functions you are (practically) unable to determine what the inputs are.
 
 Diffie-Hellman Key Exchange
 -----------------------------	
@@ -131,9 +131,6 @@ Asymmetric keys have two components: a public key used for encrypting data and a
 RSA relies on the Prime Factorization Problem for it's security, simply put it's very difficult to find the factors from the product of two very large prime numbers. In this case Eve has Alice and Bob's public keys but no information about their private key and thus cannot read their messages.
 
 Asymmetric key encryption is generally viewed as very secure but it's a slower process and thus not suitable for all use cases. Asymmetric key encryption also has a major advantage because it does not require the active exchange of data  (provided you already know someone's public key) it can be used asynchronously.
-
-/* The actual existence of one-way functions is a point of academic mathematical debate that given I barely made it through my required calculus classes I am woefully ill equipped to explain. 
-
 
 END
 =============
