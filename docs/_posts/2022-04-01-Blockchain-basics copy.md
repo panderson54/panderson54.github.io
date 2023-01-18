@@ -1,5 +1,5 @@
 ---
-title:  "Blockchain skepticism isn't being a Luddite: Part 1"
+title:  "Blockchain Basics"
 classes: wide
 categories:
   - software
@@ -131,7 +131,7 @@ etc..
 
 If you are interested in the inner workings of blockchains I would advise you to use sources that are as removed from the monetary aspects of the ecosystem as possible. I'd start with the source I've most referenced here which is the Bitcoin whitepaper. 
 
-Now that we've laid the groundwork we're going to talk about why I don't think blockchain is the wave of the future next, and finally what blockchains might actually be useful for.
+Now that we've laid the groundwork I want to talk about why I don't think blockchain is the wave of the future and what blockchains might actually be useful for. That said I don't write these on a schedule so don't hold your breath. 
 
 **Sources:**
 * [Bitcoin Whitepaper - Satoshi Nakamoto](https://bitcoin.org/bitcoin.pdf)
