@@ -16,5 +16,3 @@ Talking to others about things you've learned is often a sure way of sorting out
 Why not just keep a journal? If I'm being honest it's mostly vanity (why anyone would want to read my musings is beyond me) but something about the act of writing and putting it up for people to see, even obscurely, scratches a creative itch.
  
 So, this website is about whatever I feel like writing about. I'm not going to keep to a schedule or plan (shocking to those who know me). I'm not going to theme or otherwise confine it's subjects. The content, or lack thereof, hosted here is a reflection of whatever catches my eye.
- 
-Read into that what you will.
