@@ -18,6 +18,11 @@ https://tidbyt.com/
 
 This is just going to be a stream of me trying to get some stuff to work, if anything get published to the TidByt app store I'll link all source code here. If not I either gave up or am running it locally and so embarrassed of my ~~hack job~~ code I didn't link it.
  
+ 1/25/23
+----------------
+Spent a lot of time trying to find a stock API will serve me index scores like NASDAQ, DJI, S&P500 etc.. There appears to be one [Financial Modeling Prep - Indexes](https://site.financialmodelingprep.com/developer/docs/indexes-in-stock-market-free-api) but it looks like the index tickers are all in a premium tier. This probably won't work as all users of the applet will need to provide their own API key, this is a pattern I've seen across other apps in the community apps repo. I may have to code something up with static numbers and come back to the API problem as the pattern for fetching some JSON from an endpoint is simple. 
+
+In other news the Pixlet APIs provide some cool features with regard to caching and encryption of things like API keys. All apps actually run on the TidByt servers and push frames out to your device forcing a refresh if the cache has been invalidated. Likewise any data pulled from other sources is cached with a TTL set within the app code. The part I'm most worried about is the visuals, the code is easy but my art skills are lacking. 
 
 1/24/23
 ----------------
