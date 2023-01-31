@@ -45,6 +45,42 @@ In other news the Pixlet APIs provide some cool features with regard to caching 
 
 1/29/23
 ----------------
-I decided to skip to hacking around in pixlet and I'll come back to finding an API that provides something I want to display. I used the tutorial + reading through some community code to make a stock app the takes in a few parameters, symbol, shares and an API key for alphavantage and returns the value of the stock multiplied by the number of shares. This exact app is already in the community repo but for some reason it was not working on my TidByt device. I added in some caching and checks for to make sure the cached price data is for the current stock symbol, we throw out the cached data if the symbol changes in the config. As expected the actual formatting of the output involved the most trail and error, not because the docs are bad but because I'm not particularly frontend minded. I think I'll move onto trying to use Goodreads/Kindle's API to display my reading progress, not a useful app but I like tracking my reading goals and it's not something anyone else has built. I'll need to pull the community repo to get started. 
+I decided to skip to hacking around in pixlet and I'll come back to finding an API that provides something I want to display. I used the tutorial + reading through some community code to make a stock app that takes in a few parameters (symbol, shares and an API key for alphavantage) and returns the value of the stock multiplied by the number of shares. This exact app is already in the community repo but for some reason it was not working on my TidByt device. I added in some caching and checks to make sure the cached price data is for the current stock symbol, we throw out the cached data if the symbol changes in the config. As expected the actual formatting of the output involved the most trial and error, not because the docs are bad but because I'm not particularly frontend minded. I think I'll move onto trying to use Goodreads/Kindle's API to display my reading progress, not a useful app but I like tracking my reading goals and it's not something anyone else has built. I'll need to pull the community repo to get started. 
 
-![Wikipedia DHKE paint example]({{ site.url }}{{ site.baseurl }}/assets/images/tidbyt-1-29.png)
+![My First Output]({{ site.url }}{{ site.baseurl }}/assets/images/tidbyt-1-29.png)
+
+1/31/23
+----------------
+I embarked on my Goodreads journey without realizing that Goodreads had killed off its public API in 2020. Not to be deterred, I decided to use this as a reason to learn a little more Starlark and built a web scraper aftering sorting out where the data I wanted lived publicly on Goodreads. Turns out , given what I am calling a challenge ID (not a user ID) Goodreads will serve up any public profile yearly reading challenge at https://www.goodreads.com/user_challenges/ . Using this I set up an applet to take in the challenge ID, make a GET request and parse the returned HTML to show how far along any given user is on their reading goals. 
+
+This is what it looks like in Starlark
+
+~~~
+ challenge_page = http.get(GOODREADS_PROGRESS_URL + config.str("user_challenge_id", DEFAULT_CHALLENGE_ID))
+
+
+        if challenge_page.status_code != 200:
+            fail("Request failed with status %d", challenge_page.status_code)
+
+
+        body = challenge_page.body()
+        progress_div = re.findall(r"<div class='progressText'>([\s\S]*?)</div>", body)
+
+
+        if not progress_div:
+             fail("No challenge found at {}".format(config.str("user_challenge_id", DEFAULT_CHALLENGE_ID)))
+
+
+        progress_nums = re.findall(r"\d+", progress_div[0])
+        progress = progress_nums[0]
+        goal = progress_nums[1]
+~~~
+
+It's pretty readable as it's basically python, including a ported over regular expressions library. I then did basically 0 work to display it as such. There is a toggle for an as of yet un implemented "are you on track function" which I'll do later.
+
+
+
+![My SecondOutput]({{ site.url }}{{ site.baseurl }}/assets/images/tidbyt-1-30.png)
+
+All in all not bad for a evening messing around, most information was either from the previously linked TidByt docs and the [Starlark spec](https://github.com/bazelbuild/starlark/blob/master/spec.md)
+
