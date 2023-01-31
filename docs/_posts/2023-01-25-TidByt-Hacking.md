@@ -18,6 +18,12 @@ https://tidbyt.com/
 
 This is just going to be a stream of me trying to get some stuff to work, if anything get published to the TidByt app store I'll link all source code here. If not I either gave up or am running it locally and so embarrassed of my ~~hack job~~ code I didn't link it.
  
+1/29/23
+----------------
+I decided to skip to hacking around in pixlet and I'll come back to finding an API that provides something I want to display. I used the tutorial + reading through some community code to make a stock app the takes in a few parameters, symbol, shares and an API key for alphavantage and returns the value of the stock multiplied by the number of shares. This exact app is already in the community repo but for some reason it was not working on my TidByt device. I added in some caching and checks for to make sure the cached price data is for the current stock symbol, we throw out the cached data if the symbol changes in the config. As expected the actual formatting of the output involved the most trail and error, not because the docs are bad but because I'm not particularly frontend minded. I think I'll move onto trying to use Goodreads/Kindle's API to display my reading progress, not a useful app but I like tracking my reading goals and it's not something anyone else has built. I'll need to pull the community repo to get started. 
+
+![Wikipedia DHKE paint example]({{ site.url }}{{ site.baseurl }}/assets/images/tidbyt-1-29.png)
+
  1/25/23
 ----------------
 Spent a lot of time trying to find a stock API will serve me index scores like NASDAQ, DJI, S&P500 etc.. There appears to be one [Financial Modeling Prep - Indexes](https://site.financialmodelingprep.com/developer/docs/indexes-in-stock-market-free-api) but it looks like the index tickers are all in a premium tier. This probably won't work as all users of the applet will need to provide their own API key, this is a pattern I've seen across other apps in the community apps repo. I may have to code something up with static numbers and come back to the API problem as the pattern for fetching some JSON from an endpoint is simple. 
