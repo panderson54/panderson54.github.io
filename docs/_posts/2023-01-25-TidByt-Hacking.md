@@ -86,7 +86,6 @@ All in all not bad for a evening messing around, most information was either fro
 
 2/2/23
 ----------------
-
 I decided I wanted to work on the visuals of this goodreads applet and thought it'd be fun if your little bookshelf filled up as you read books over the course of the year. This gave me a good chance to sort out how the different render functions worked and how to position things on the screen. I made a bunch of book art using [PixelArt](pixelart.com) as my editor (see my files here: [gallery](https://www.pixilart.com/larkin54/gallery)) and wrote a very dumb if statement that takes in the number of completed books from my Goodreads scraper and renders between 0 and 13 books. The average adult reads 12 books a year and my art skills ran out of steam so displaying more than that is task for later (if ever). What I was left with is a fun display that will update once a day if this app is running on your TidByt. I used some basic transformations to keep my 4 assets fresh-ish despite a lot of reuse. 
 
 ![Book Demo]({{ site.url }}{{ site.baseurl }}/assets/images/bookdemo.gif)
@@ -97,9 +96,13 @@ You can render your applet locally and then push that asset to your TidByt from 
 
 2/19/23
 ----------------
-
 I polished up what I had written the other week and forked [tidbyt's community repo](https://github.com/tidbyt/community). Running the pixlet create script sets up a folder and does some basic scaffolding for you, I copy and pasted my code into the generated file and did a little clean up. First on the agenda was to remove all testing code and any references to my own account. In order to make this run out of the box for people I encrypted my personal challenge ID using pixlet's encrypt command from the CLI. This (I'm guessing here) encrypts the passed data with a public key from Tidbyt and is only able to be decrypted by a private key, at runtime, which resides with them. Because apps all ultimately run on tidbyt's servers this is a sensible way to let developers store API keys and other data with them without revealing it in code. 
 
 I ran pixlet's code profiling, formatting, linting and checking commands to make sure things were running properly and up to TidByt's style standards and submitted a [PR](https://github.com/tidbyt/community/pull/1149). I give my PR a 50/50 chance of being accepted. While I don't think my solution is terrible (or I'd not have submitted it) the use of what is essentially a web scraper to get the progress data is not a great practice and certainly not something I'd let go into production for any sort of real service. That said there is no public API to get this data and short of reverse engineering Goodreads' private API it's the best option I've got. 
 
 I'll check back in when I get feedback on my PR from the pixlet community. 
+
+2/22/23
+----------------
+Turns out the cache keys are on a per app basis, all users of the app share a cache, this means that my storing of progress and goal are global unless we append some sort of unique indentifier to the cache key. To solve this I just appened the challenge ID when cacheing progress and goals. The shared cache per app makes a ton of sense if you are doing something like stock prices or other data that would be the same regardless of user but still requires some sort of calculation or API call. 
+
