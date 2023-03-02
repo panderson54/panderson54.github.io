@@ -106,3 +106,6 @@ I'll check back in when I get feedback on my PR from the pixlet community.
 ----------------
 Turns out the cache keys are on a per app basis, all users of the app share a cache, this means that my storing of progress and goal are global unless we append some sort of unique indentifier to the cache key. To solve this I just appened the challenge ID when cacheing progress and goals. The shared cache per app makes a ton of sense if you are doing something like stock prices or other data that would be the same regardless of user but still requires some sort of calculation or API call. 
 
+3/2/23
+----------------
+My PR was merged! The Goodreads Challenge Tracker will appear in the next version of the TidByt app released. I'll update this post when that happens but for now I'm considering this little project done. If I build something next it'll be an NCAA basketball scoreboard for specific teams but seeing as March Madness is about to start that is probably a project for the '23-'24 season. I don't often code outside of work as usually that itch is scratched (and then some) by my day to day contributions at Meta but this was a fun project where I got to learn something new and publish it out to a wider community. 
