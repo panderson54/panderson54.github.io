@@ -109,3 +109,7 @@ Turns out the cache keys are on a per app basis, all users of the app share a ca
 3/2/23
 ----------------
 My PR was merged! The Goodreads Challenge Tracker will appear in the next version of the TidByt app released. I'll update this post when that happens but for now I'm considering this little project done. If I build something next it'll be an NCAA basketball scoreboard for specific teams but seeing as March Madness is about to start that is probably a project for the '23-'24 season. I don't often code outside of work as usually that itch is scratched (and then some) by my day to day contributions at Meta but this was a fun project where I got to learn something new and publish it out to a wider community. 
+
+3/6/23
+----------------
+My app is live in the TidByt app! Happy reading. 
