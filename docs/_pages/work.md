@@ -12,4 +12,4 @@ I'm a senior software engineer at Meta on the scaled business team. I've worked 
 - Engineering mentorship and career growth 
 
 
-If you want to talk about work feel free to email me or reach out on LinkedIn. I am not actively looking for new opportunities at this time.
+If you want to talk about work feel free to email me or reach out on LinkedIn.
