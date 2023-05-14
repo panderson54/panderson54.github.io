@@ -2,4 +2,4 @@
 title: "Resume"
 permalink: /resume/
 ---
-[My Resume](/assets/documents/PatrickAndersonResume.pdf)
+[Check out my resume!](/assets/documents/PatrickAndersonResume.pdf)
