@@ -21,7 +21,7 @@ The always/never is a concept coined in the midst of the Cold War as the US grap
 
 Technologies or procedures that enable one end of the always/never spectrum typically move you away from the other. A code needed to launch a missile introduces some mechanism to render said missile inert should the code not be present, that is a failure point as well as an introduction of a delay. Keeping nuclear bombs strapped to planes on the flight line reduces the time needed to respond to an attack, it also means that a pilot could hop in and fly it off, starting World War III. In a bit of family history my paternal grandfather was the custodian of such weapons mounted to F-86Gs in West Germany at the height of the Cold War. 
 
-![F84 in flight]({{ site.url }}{{ site.baseurl }}/assets/images/f84.jpg)
+![F84 in flight]({{ site.url }}{{ site.baseurl }}/assets/images/F84.jpg)
 
 > "At a NATO base in Germany, Agnew looked out at the runway and, in his own words, “nearly wet my pants.” The F-84F fighter planes on alert, each carrying a fully assembled Mark 7 bomb, were being guarded by a single American soldier. Agnew walked over and asked the young enlisted man, who carried an old-fashioned, bolt-action rifle, what he’d do if somebody jumped into one of the planes and tried to take off. Would he shoot at the pilot—or the bomb? The soldier had never been told what to do"  
 
@@ -29,7 +29,7 @@ Technologies or procedures that enable one end of the always/never spectrum typi
 
 We actually deal with this concept in less extreme forms all the time, 'fail-safe' is the common word for engineering something to default to safe rather than dangerous state. For example my space heater when moved, tilted or knocked over shuts off. This is a value consideration by the engineers who built the device, it means that they've decided it's better to render a device inoperable in certain instances than it is to allow it to function potentially dangerously, placing them firmly on the never end of the always/never spectrum.
 
-In the perverse world of nuclear arms we have the concept of  'fail-deadly', which describes policies that without outside inputs reach a deadly state, this case usually a launch order, rather than a safe state. The most shocking example of this is found in the Soviet 'Dead Hand' or 'Perimeter' system, which you can read more about in *The Dead Hand* by David E Hoffman, which is an extreme example of the always end of the spectrum.
+In the perverse world of nuclear arms we have the concept of  'fail-deadly', which describes policies that without outside inputs reach a deadly state, in this case usually a launch order. The most shocking example of this is found in the Soviet 'Dead Hand' or 'Perimeter' system, which you can read more about in *The Dead Hand* by David E Hoffman, this is an extreme example of the always end of the spectrum.
 
 >"The Strategic Air Command wanted bombs that were safe and reliable. But most of all, it wanted bombs that worked. A willingness to take personal risks was deeply embedded in SAC’s institutional culture [...] they would not be pleased, amid the chaos of thermonuclear warfare, to learn that the bombs they dropped didn’t detonate because of a safety device. Civilian weapon designers, on the other hand, were bound to have a different perspective—to think about the peacetime risk of an accident and err on the side of never." 
 
