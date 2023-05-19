@@ -36,6 +36,7 @@ In the perverse world of nuclear arms we have the concept of  'fail-deadly', whi
 \- *Eric Schlosser, Command And Control* 
 
 
+
 Where does this concept intersect with platform trust and safety?  
 ---------------------
 
