@@ -8,7 +8,7 @@ tags:
   - nuclear
   - software
 ---
-![Titan 2 Missile]({{ site.url }}{{ site.baseurl }}/assets/images/titan2a.png)
+![Titan 2 Missile]({{ site.url }}{{ site.baseurl }}/assets/images/titan2.png)
 
 The always/never is a concept coined in the midst of the Cold War as the US grappled with how to safely manage its nuclear weapons while keeping them ready for immediate use as a deterrent. The problem was about how to make sure that an accidental nuclear use did not happen, whether through negligence, sabotage, accident or even unauthorized intended use while making sure that an authorized user could launch a live warhead in minutes if needed.  
 
