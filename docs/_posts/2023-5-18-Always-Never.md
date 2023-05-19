@@ -10,6 +10,9 @@ tags:
 ---
 ![Titan 2 Missile]({{ site.url }}{{ site.baseurl }}/assets/images/titan2.png)
 
+Always/Never
+============
+
 The always/never is a concept coined in the midst of the Cold War as the US grappled with how to safely manage its nuclear weapons while keeping them ready for immediate use as a deterrent. The problem was about how to make sure that an accidental nuclear use did not happen, whether through negligence, sabotage, accident or even unauthorized intended use while making sure that an authorized user could launch a live warhead in minutes if needed.  
 
 >"The need for a nuclear weapon to be safe and the need for it to be reliable were often in conflict. A safety mechanism that made a bomb less likely to explode during an accident could also, during wartime, render it more likely to be a dud. The contradiction between these two design goals was succinctly expressed by the words “always/never.” Ideally, a nuclear weapon would always detonate when it was supposed to—and never detonate when it wasn’t supposed to.”"
@@ -32,7 +35,9 @@ In the perverse world of nuclear arms we have the concept of  'fail-deadly', whi
 
 \- *Eric Schlosser, Command And Control* 
 
-So where does this concept interact with platform trust and safety? 
+
+Where does this concept intersect with platform trust and safety?  
+---------------------
 
 ![Always Never]({{ site.url }}{{ site.baseurl }}/assets/images/always_never.png)
 
