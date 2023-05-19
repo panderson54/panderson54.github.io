@@ -8,7 +8,7 @@ tags:
   - nuclear
   - software
 ---
-![Titan 2 Missile]({{ site.url }}{{ site.baseurl }}/assets/images/titan2.jpg)
+![Titan 2 Missile]({{ site.url }}{{ site.baseurl }}/assets/images/titan2a.png)
 
 The always/never is a concept coined in the midst of the Cold War as the US grappled with how to safely manage its nuclear weapons while keeping them ready for immediate use as a deterrent. The problem was about how to make sure that an accidental nuclear use did not happen, whether through negligence, sabotage, accident or even unauthorized intended use while making sure that an authorized user could launch a live warhead in minutes if needed.  
 
@@ -23,6 +23,12 @@ Technologies or procedures that enable one end of the always/never spectrum typi
 We actually deal with this concept in less extreme forms all the time, 'fail-safe' is the common word for engineering something to default to safe rather than dangerous state. For example my space heater when moved, tilted or knocked over shuts off. This is a value consideration by the engineers who built the device, it means that they've decided it's better to render a device inoperable in certain instances than it is to allow it to function potentially dangerously, placing them firmly on the never end of the always/never spectrum.
 
 In the perverse world of nuclear arms we have the concept of  'fail-deadly', which describes policies that without outside inputs reach a deadly state, this case usually a launch order, rather than a safe state. The most shocking example of this is found in the Soviet 'Dead Hand' or 'Perimeter' system, which you can read more about in *The Dead Hand* by David E Hoffman, which is an extreme example of the always end of the spectrum.
+
+>"The Strategic Air Command wanted bombs that were safe and reliable. But most of all, it wanted bombs that worked. A willingness to take personal risks was deeply embedded in SAC’s institutional culture [...] they would not be pleased, amid the chaos of thermonuclear warfare, to learn that the bombs they dropped didn’t detonate because of a safety device.
+
+Civilian weapon designers, on the other hand, were bound to have a different perspective—to think about the peacetime risk of an accident and err on the side of never." 
+
+\- *Eric Schlosser, Command And Control* 
 
 So where does this concept interact with platform trust and safety? 
 
