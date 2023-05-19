@@ -19,7 +19,7 @@ The always/never is a concept coined in the midst of the Cold War as the US grap
 
 \- *Eric Schlosser, Command And Control* 
 
-Technologies or procedures that enable one end of the always/never spectrum typically move you away from the other. A code needed to launch a missile introduces some mechanism to render said missile inert should the code not be present, that is a failure point as well as an introduction of a delay. Keeping nuclear bombs strapped to planes on the flight line reduces the time needed to respond to an attack, it also means that a pilot could hop in and fly it off, starting World War III. In a bit of family history my paternal grandfather was the custodian of such weapons mounted to F-86Gs in West Germany at the height of the Cold War. 
+Technologies or procedures that enable one end of the always/never spectrum typically move you away from the other. A code needed to launch a missile introduces some mechanism to render said missile inert should the code not be present, that is a failure point as well as an introduction of a delay. Keeping nuclear bombs strapped to planes on the flight line reduces the time needed to respond to an attack, it also means that a pilot could hop in and fly it off, starting World War III. In a bit of family history my paternal grandfather was the custodian of such weapons mounted to F-86Fs in West Germany at the height of the Cold War. 
 
 ![F84 in flight]({{ site.url }}{{ site.baseurl }}/assets/images/F84.jpg)
 
