@@ -51,6 +51,7 @@ I am not going to express a viewpoint on how an ideal system would walk this lin
 
 * [Moderated Content from Stanford Law School](https://law.stanford.edu/directory/evelyn-douek/moderated-content/) a podcast content about content moderation, moderated by assistant professor Evelyn Douek. The community standards of this podcast prohibit anything except the wonkiest conversations about the regulation—both public and private—of what you see, hear and do online.
 * [Lawfare's Arbiters of Truth](https://www.lawfareblog.com/topic/arbiters-truth) an occasional Lawfare podcast series on the online information ecosystem featuring interviews with experts about the legal and policy aspects of the debates around political discourse, online speech and social media platforms. 
+* [Dual-use regulation: Managing hate and terrorism online before and after Section 230 reform](https://www.brookings.edu/research/dual-use-regulation-managing-hate-and-terrorism-online-before-and-after-section-230-reform/) by Brian Fishman. Brian's article was published by Brookings and then he was interviewed by Quinta Jurecic on Arbiters of Truth. His interview and article percipitated the above train of thought.
 
 
 Books Mentioned in this post:
