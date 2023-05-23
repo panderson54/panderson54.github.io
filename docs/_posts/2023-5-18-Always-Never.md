@@ -2,11 +2,10 @@
 title:  "Always/Never Paradox and Platform Trust & Safety"
 classes: wide
 categories:
-  - software
   - nuclear
 tags:
   - nuclear
-  - software
+  - platforms
 ---
 ![Titan 2 Missile]({{ site.url }}{{ site.baseurl }}/assets/images/titan2.png)
 
