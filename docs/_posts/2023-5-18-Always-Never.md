@@ -2,6 +2,7 @@
 title:  "Always/Never Paradox and Platform Trust & Safety"
 classes: wide
 categories:
+  - software
   - nuclear
 tags:
   - nuclear
