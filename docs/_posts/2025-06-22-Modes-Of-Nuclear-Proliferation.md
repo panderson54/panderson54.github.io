@@ -49,7 +49,7 @@ Secret bases and hidden efforts hiders attempt to develop nuclear capabilities i
 
 Iran:
 ---------------------
-![Proliferation Flow Chart]({{ site.url }}{{ site.baseurl }}/assets/images/pro_flow.png)
+![Proliferation Flow Chart]({{ site.url }}{{ site.baseurl }}/assets/images/pro_flow.PNG)
 
 
 Dr. Narang's flow chart is a great tool here and I want to look at it in light of recent events in Iran. As noted above Iran was, at time or writing, classified as a hard hedger, a strategy characterized by a nation having all pieces in place for weapons development but not having made that last step to actively acquire a weapon. 
