@@ -60,7 +60,13 @@ The other thing I hadn't anticipated: you can offload more than just the interes
 
 ## The App
 
+![Ledger Dashboard]({{ site.url }}{{ site.baseurl }}/assets/images/ledger_hero.png){: .align-center}
+
 Ledger is a self-hosted personal finance dashboard. Monthly net worth tracking across account types (cash, retirement, investments, real estate, mortgage) with calculated metrics for savings rate and net worth change. There's a holdings system for tracking individual securities, a projections view for modeling portfolio growth and FI timeline, and a dividends view for understanding portfolio income.
+
+![Projections — Path to FI]({{ site.url }}{{ site.baseurl }}/assets/images/ledger_projections.png){: .align-center}
+
+![Reports — Portfolio Allocation & Asset Drift]({{ site.url }}{{ site.baseurl }}/assets/images/ledger_charts.png){: .align-center}
 
 Tech stack:
 - **Backend:** Python, Flask, SQLAlchemy, SQLite
@@ -74,6 +80,8 @@ The architecture I'm most happy with: Haiku owns reasoning and classification ta
 Ledger has no budgeting features. No spending categories. No "you overspent $12 on groceries" notifications. No debt payoff calculator.
 
 Monthly cash flow entry is intentionally blunt: total income, total expenses. I look at my credit card bills, add them up, enter the number. I look at my paycheck, enter the number. Five minutes, no categorization.
+
+![Monthly Data Entry]({{ site.url }}{{ site.baseurl }}/assets/images/ledger_monthly_update.png){: .align-center}
 
 Most personal finance apps are built around budgeting and debt management - that's a real and important problem for a lot of people. Ledger is built for a different use case: savings rate, risk exposure, asset allocation, and portfolio performance over time. Anything else would have been scope creep.
 
