@@ -1,6 +1,8 @@
 ---
 title:  "Blockchain Basics"
 classes: wide
+header:
+  teaser: /assets/images/githistory.png
 categories:
   - software
 tags:

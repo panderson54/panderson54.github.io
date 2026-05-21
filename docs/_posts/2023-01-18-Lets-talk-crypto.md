@@ -1,6 +1,8 @@
 ---
 title:  "Let's talk Crypto[graphy]"
 classes: wide
+header:
+  teaser: /assets/images/RSA_key_banner.png
 categories:
   - software
 tags:

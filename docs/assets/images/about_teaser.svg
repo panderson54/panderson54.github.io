@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  <rect x="80" y="90" width="640" height="8" rx="4" fill="#4a9eff" opacity="0.8"/>
+  <rect x="80" y="118" width="480" height="6" rx="3" fill="#ffffff" opacity="0.4"/>
+  <rect x="80" y="140" width="560" height="6" rx="3" fill="#ffffff" opacity="0.3"/>
+  <rect x="80" y="162" width="520" height="6" rx="3" fill="#ffffff" opacity="0.3"/>
+  <rect x="80" y="200" width="400" height="6" rx="3" fill="#ffffff" opacity="0.25"/>
+  <rect x="80" y="222" width="580" height="6" rx="3" fill="#ffffff" opacity="0.25"/>
+  <rect x="80" y="244" width="440" height="6" rx="3" fill="#ffffff" opacity="0.25"/>
+  <rect x="80" y="282" width="500" height="6" rx="3" fill="#ffffff" opacity="0.2"/>
+  <rect x="80" y="304" width="360" height="6" rx="3" fill="#ffffff" opacity="0.2"/>
+  <rect x="80" y="326" width="540" height="6" rx="3" fill="#ffffff" opacity="0.2"/>
+  <text x="400" y="390" font-family="Georgia, serif" font-size="22" fill="#4a9eff" opacity="0.9" text-anchor="middle">mostly ramblings</text>
+</svg>

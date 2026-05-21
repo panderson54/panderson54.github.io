@@ -1,6 +1,8 @@
 ---
 title:  "Adventures with TidByt"
 classes: wide
+header:
+  teaser: /assets/images/tidbyt_banner.jpg
 categories:
   - software
 tags:
