@@ -1,6 +1,8 @@
 ---
 title: "Building Ledger: A Personal Finance App Built With Claude"
 classes: wide
+header:
+  image: /assets/images/claude_header_option3.svg
 categories:
   - software
 tags:
