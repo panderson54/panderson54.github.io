@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 800" width="2000" height="800">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="terminalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="greenLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#34d399"/>
+    </linearGradient>
+    <filter id="termglow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bgglow">
+      <feGaussianBlur stdDeviation="30" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="2000" height="800" fill="url(#bg3)"/>
+
+  <!-- Ambient glows -->
+  <circle cx="1000" cy="400" r="500" fill="#7c3aed" fill-opacity="0.04" filter="url(#bgglow)"/>
+  <circle cx="200" cy="600" r="300" fill="#2563eb" fill-opacity="0.06" filter="url(#bgglow)"/>
+  <circle cx="1800" cy="200" r="250" fill="#10b981" fill-opacity="0.04" filter="url(#bgglow)"/>
+
+  <!-- Terminal window -->
+  <rect x="100" y="80" width="840" height="640" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- Terminal title bar -->
+  <rect x="100" y="80" width="840" height="44" rx="12" fill="#21262d"/>
+  <rect x="100" y="104" width="840" height="20" fill="#21262d"/>
+  <!-- Traffic lights -->
+  <circle cx="136" cy="102" r="7" fill="#ff5f57"/>
+  <circle cx="160" cy="102" r="7" fill="#ffbd2e"/>
+  <circle cx="184" cy="102" r="7" fill="#28c840"/>
+  <!-- Terminal title -->
+  <text x="480" y="108" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#8b949e" text-anchor="middle">claude — bash — 120×40</text>
+
+  <!-- Terminal content -->
+  <!-- Prompt lines -->
+  <text x="130" y="165" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#10b981">panderson54</text>
+  <text x="258" y="165" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#8b949e">@</text>
+  <text x="272" y="165" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#60a5fa">ledger</text>
+  <text x="320" y="165" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#8b949e"> $ </text>
+  <text x="356" y="165" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">flask run --debug</text>
+
+  <text x="130" y="200" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#8b949e"> * Running on http://127.0.0.1:5000</text>
+  <text x="130" y="225" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#8b949e"> * Debug mode: on</text>
+
+  <text x="130" y="270" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#10b981">panderson54</text>
+  <text x="258" y="270" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#8b949e">@</text>
+  <text x="272" y="270" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#60a5fa">ledger</text>
+  <text x="320" y="270" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#8b949e"> $ </text>
+  <text x="356" y="270" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#e6edf3">git log --oneline -5</text>
+
+  <text x="130" y="305" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#a78bfa">3f8a2c1</text>
+  <text x="210" y="305" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#e6edf3"> add net worth chart endpoint</text>
+  <text x="130" y="328" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#a78bfa">b9e1d0f</text>
+  <text x="210" y="328" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#e6edf3"> implement savings rate calculation</text>
+  <text x="130" y="351" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#a78bfa">c4a8f72</text>
+  <text x="210" y="351" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#e6edf3"> add portfolio allocation view</text>
+  <text x="130" y="374" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#a78bfa">e1b3d89</text>
+  <text x="210" y="374" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#e6edf3"> initial flask app scaffold</text>
+  <text x="130" y="397" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#a78bfa">0a7c4e2</text>
+  <text x="210" y="397" font-family="'SF Mono', 'Fira Code', monospace" font-size="14" fill="#e6edf3"> project init + PRD</text>
+
+  <!-- Claude chat section -->
+  <rect x="130" y="430" width="780" height="34" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="150" y="452" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#6b7280">claude</text>
+  <text x="202" y="452" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#e6edf3"> &gt; How should I structure the account schema?</text>
+
+  <text x="130" y="500" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#a78bfa">Claude: </text>
+  <text x="220" y="500" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#8b949e">I'd recommend a normalized approach with an</text>
+  <text x="130" y="520" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#8b949e">       accounts table, a snapshots table for</text>
+  <text x="130" y="540" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#8b949e">       time-series balances, and a transactions</text>
+  <text x="130" y="560" font-family="'SF Mono', 'Fira Code', monospace" font-size="13" fill="#8b949e">       table for categorized inflows/outflows...</text>
+
+  <!-- Blinking cursor -->
+  <rect x="130" y="590" width="10" height="20" rx="1" fill="#10b981" fill-opacity="0.8"/>
+
+  <!-- Prompt line at bottom -->
+  <text x="146" y="606" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#10b981">panderson54</text>
+  <text x="274" y="606" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#8b949e">@</text>
+  <text x="288" y="606" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#60a5fa">ledger</text>
+  <text x="336" y="606" font-family="'SF Mono', 'Fira Code', monospace" font-size="15" fill="#8b949e"> $ </text>
+
+  <!-- Right side: title block -->
+  <text x="1020" y="260" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="300" fill="#8b949e" letter-spacing="6">BUILDING</text>
+
+  <text x="1015" y="380" font-family="'Segoe UI', Arial, sans-serif" font-size="120" font-weight="800" fill="#ffffff" letter-spacing="-4">Ledger</text>
+
+  <!-- Accent line -->
+  <rect x="1018" y="400" width="600" height="4" rx="2" fill="url(#terminalGrad)"/>
+
+  <text x="1020" y="450" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="300" fill="#8b949e">A Personal Finance App</text>
+  <text x="1020" y="490" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="400" fill="#a78bfa">Built With Claude</text>
+
+  <!-- Stats row -->
+  <rect x="1020" y="560" width="180" height="100" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="1040" y="595" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e">COMMITS</text>
+  <text x="1040" y="640" font-family="'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#10b981">127</text>
+
+  <rect x="1220" y="560" width="180" height="100" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="1240" y="595" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e">HOURS</text>
+  <text x="1240" y="640" font-family="'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#60a5fa">40+</text>
+
+  <rect x="1420" y="560" width="180" height="100" rx="10" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="1440" y="595" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e">AI-DRIVEN</text>
+  <text x="1440" y="640" font-family="'Segoe UI', Arial, sans-serif" font-size="42" font-weight="700" fill="#a78bfa">80%</text>
+</svg>

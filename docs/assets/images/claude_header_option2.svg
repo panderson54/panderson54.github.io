@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 800" width="2000" height="800">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa"/>
+      <stop offset="100%" style="stop-color:#e9ecef"/>
+    </linearGradient>
+    <linearGradient id="purple2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f3f4f6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Light background -->
+  <rect width="2000" height="800" fill="url(#bg2)"/>
+
+  <!-- Left purple panel -->
+  <rect x="0" y="0" width="780" height="800" fill="url(#purple2)"/>
+
+  <!-- Decorative circles on purple side -->
+  <circle cx="120" cy="120" r="200" fill="#ffffff" fill-opacity="0.05"/>
+  <circle cx="700" cy="700" r="160" fill="#ffffff" fill-opacity="0.05"/>
+  <circle cx="50" cy="600" r="80" fill="#ffffff" fill-opacity="0.04"/>
+
+  <!-- Dot grid on purple side -->
+  <g fill="#ffffff" fill-opacity="0.15">
+    <circle cx="80" cy="300" r="2.5"/>
+    <circle cx="140" cy="300" r="2.5"/>
+    <circle cx="200" cy="300" r="2.5"/>
+    <circle cx="260" cy="300" r="2.5"/>
+    <circle cx="80" cy="360" r="2.5"/>
+    <circle cx="140" cy="360" r="2.5"/>
+    <circle cx="200" cy="360" r="2.5"/>
+    <circle cx="260" cy="360" r="2.5"/>
+    <circle cx="80" cy="420" r="2.5"/>
+    <circle cx="140" cy="420" r="2.5"/>
+    <circle cx="200" cy="420" r="2.5"/>
+    <circle cx="260" cy="420" r="2.5"/>
+    <circle cx="80" cy="480" r="2.5"/>
+    <circle cx="140" cy="480" r="2.5"/>
+    <circle cx="200" cy="480" r="2.5"/>
+    <circle cx="260" cy="480" r="2.5"/>
+  </g>
+
+  <!-- Main title on purple -->
+  <text x="80" y="370" font-family="'Segoe UI', Arial, sans-serif" font-size="90" font-weight="800" fill="#ffffff" letter-spacing="-3">Building</text>
+  <text x="80" y="475" font-family="'Segoe UI', Arial, sans-serif" font-size="90" font-weight="800" fill="#ffffff" letter-spacing="-3">Ledger</text>
+
+  <!-- Subtitle on purple -->
+  <text x="82" y="530" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="300" fill="#c4b5fd" letter-spacing="0.5">A Personal Finance App Built With Claude</text>
+
+  <!-- Separator line -->
+  <rect x="780" y="0" width="6" height="800" fill="url(#purple2)"/>
+
+  <!-- Right side: Mock dashboard card -->
+  <!-- Net Worth Card -->
+  <rect x="860" y="100" width="440" height="220" rx="16" fill="url(#card1)" style="filter: drop-shadow(0 4px 24px rgba(0,0,0,0.08))"/>
+  <text x="900" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#6b7280" letter-spacing="1">NET WORTH</text>
+  <text x="900" y="215" font-family="'Segoe UI', Arial, sans-serif" font-size="52" font-weight="700" fill="#111827">$284,500</text>
+  <text x="900" y="255" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#10b981">↑ +12.4% this year</text>
+  <!-- Mini bar chart in card -->
+  <rect x="900" y="280" width="30" height="20" rx="3" fill="#7c3aed" fill-opacity="0.3"/>
+  <rect x="940" y="272" width="30" height="28" rx="3" fill="#7c3aed" fill-opacity="0.5"/>
+  <rect x="980" y="260" width="30" height="40" rx="3" fill="#7c3aed" fill-opacity="0.7"/>
+  <rect x="1020" y="250" width="30" height="50" rx="3" fill="#7c3aed"/>
+  <rect x="1060" y="240" width="30" height="60" rx="3" fill="#4f46e5"/>
+
+  <!-- Savings Rate Card -->
+  <rect x="860" y="360" width="210" height="200" rx="16" fill="url(#card1)" style="filter: drop-shadow(0 4px 24px rgba(0,0,0,0.08))"/>
+  <text x="900" y="405" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#6b7280" letter-spacing="1">SAVINGS RATE</text>
+  <text x="900" y="465" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="700" fill="#111827">32%</text>
+  <text x="900" y="500" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#10b981">↑ +4% vs last month</text>
+  <!-- Donut ring suggestion -->
+  <circle cx="965" cy="530" r="18" fill="none" stroke="#7c3aed" stroke-width="5"/>
+  <circle cx="985" cy="530" r="18" fill="none" stroke="#e5e7eb" stroke-width="5"/>
+
+  <!-- Portfolio Card -->
+  <rect x="1090" y="360" width="210" height="200" rx="16" fill="#7c3aed" style="filter: drop-shadow(0 4px 24px rgba(124,58,237,0.3))"/>
+  <text x="1130" y="405" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#c4b5fd" letter-spacing="1">PORTFOLIO</text>
+  <text x="1130" y="465" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff">$198k</text>
+  <text x="1130" y="500" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#a78bfa">Stocks · Bonds · Cash</text>
+  <text x="1130" y="532" font-family="'Segoe UI', Arial, sans-serif" font-size="22" fill="#ffffff">↗</text>
+
+  <!-- Trend chart card -->
+  <rect x="860" y="595" width="440" height="130" rx="16" fill="url(#card1)" style="filter: drop-shadow(0 4px 24px rgba(0,0,0,0.08))"/>
+  <text x="900" y="630" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#6b7280" letter-spacing="1">6-MONTH TREND</text>
+  <polyline points="900,690 960,670 1020,675 1080,650 1140,630 1200,610 1260,590"
+    fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1260" cy="590" r="5" fill="#4f46e5"/>
+
+  <!-- Second column of cards -->
+  <rect x="1360" y="100" width="480" height="625" rx="16" fill="url(#card1)" style="filter: drop-shadow(0 4px 24px rgba(0,0,0,0.08))"/>
+  <text x="1400" y="150" font-family="'Segoe UI', Arial, sans-serif" font-size="16" fill="#6b7280" letter-spacing="1">MONTHLY SNAPSHOT</text>
+  <!-- Bars -->
+  <rect x="1400" y="300" width="50" height="120" rx="4" fill="#e5e7eb"/>
+  <rect x="1400" y="300" width="50" height="90" rx="4" fill="#7c3aed"/>
+  <text x="1412" y="445" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9ca3af">Jan</text>
+  <rect x="1470" y="280" width="50" height="140" rx="4" fill="#e5e7eb"/>
+  <rect x="1470" y="280" width="50" height="100" rx="4" fill="#7c3aed"/>
+  <text x="1482" y="445" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9ca3af">Feb</text>
+  <rect x="1540" y="260" width="50" height="160" rx="4" fill="#e5e7eb"/>
+  <rect x="1540" y="260" width="50" height="130" rx="4" fill="#4f46e5"/>
+  <text x="1552" y="445" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9ca3af">Mar</text>
+  <rect x="1610" y="240" width="50" height="180" rx="4" fill="#e5e7eb"/>
+  <rect x="1610" y="240" width="50" height="140" rx="4" fill="#4f46e5"/>
+  <text x="1622" y="445" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9ca3af">Apr</text>
+  <rect x="1680" y="220" width="50" height="200" rx="4" fill="#e5e7eb"/>
+  <rect x="1680" y="220" width="50" height="165" rx="4" fill="#7c3aed"/>
+  <text x="1692" y="445" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#9ca3af">May</text>
+
+  <text x="1400" y="510" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#6b7280">Income</text>
+  <rect x="1460" y="498" width="16" height="16" rx="3" fill="#7c3aed"/>
+  <text x="1400" y="540" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#6b7280">Expenses</text>
+  <rect x="1460" y="528" width="16" height="16" rx="3" fill="#e5e7eb"/>
+
+  <!-- Bottom tag -->
+  <text x="86" y="690" font-family="'Segoe UI', Arial, sans-serif" font-size="17" fill="#c4b5fd" letter-spacing="3">panderson54.github.io</text>
+</svg>
