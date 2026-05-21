@@ -1,5 +1,7 @@
 ---
 title:  "What's this all about?"
+header:
+  teaser: /assets/images/about_teaser.svg
 categories:
   - Admin
 tags:
