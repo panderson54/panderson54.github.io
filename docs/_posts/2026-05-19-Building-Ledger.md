@@ -13,8 +13,6 @@ tags:
   - journal
 ---
 
-# Building Ledger: A Personal Finance App Built With Claude
-
 This site exists, per my own about page, as a vehicle for me to explore and organize things I've learned by writing about them. This post is about building Ledger, a self-hosted personal finance dashboard, and what I learned doing it almost entirely with Claude as a development partner.
 
 For a few years my wife and I tracked our finances using a Google Sheet built by Money With Katie, a personal finance resource connected to Morning Brew where my wife works. It was a great starting point - got us paying attention to our finances and actually talking about money in a useful way. I'd recommend it to anyone getting started.
