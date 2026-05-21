@@ -2,14 +2,16 @@
 title:  "Let's talk Crypto[graphy]"
 classes: wide
 header:
-  teaser: /assets/images/RSA_key_banner.png
+  teaser: /assets/images/crypto_blog_banner.svg
+  overlay_image: /assets/images/crypto_blog_banner.svg
+  overlay_filter: 0
 categories:
   - software
 tags:
   - cryptography
   - software
 ---
-![Git History Banner]({{ site.url }}{{ site.baseurl }}/assets/images/RSA_key_banner.png)
+![Cryptography Banner]({{ site.url }}{{ site.baseurl }}/assets/images/crypto_blog_banner.svg)
 
 Cryptography, while increasingly in the news, is not something most people think about affecting their day to day lives that said I believe cryptography is something that more people should be passingly familiar with as knowingly or not you have placed a great deal of trust in modern cryptography. The art of code making and code breaking has been the primary enabler of the wholesale move of many facets of life online, from online banking, social media, shopping, medical records and increasingly your communications with family and friends are able to be transmitted and stored securely thanks to the ubiquity of very strong cryptography. 
 
