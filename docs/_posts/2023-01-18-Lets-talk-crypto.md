@@ -4,7 +4,7 @@ classes: wide
 header:
   teaser: /assets/images/crypto_blog_banner.svg
   overlay_image: /assets/images/crypto_blog_banner.svg
-  overlay_filter: 1
+  overlay_filter: 0
 categories:
   - software
 tags:
