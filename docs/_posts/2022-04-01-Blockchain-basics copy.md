@@ -3,6 +3,9 @@ title:  "Blockchain Basics"
 classes: wide
 header:
   teaser: /assets/images/githistory.png
+  overlay_image: /assets/images/githistory.png
+  overlay_filter: 0
+  show_overlay_excerpt: false
 categories:
   - software
 tags:

@@ -3,6 +3,9 @@ title:  "Adventures with TidByt"
 classes: wide
 header:
   teaser: /assets/images/tidbyt_banner.jpg
+  overlay_image: /assets/images/tidbyt_banner.jpg
+  overlay_filter: 0
+  show_overlay_excerpt: false
 categories:
   - software
 tags:

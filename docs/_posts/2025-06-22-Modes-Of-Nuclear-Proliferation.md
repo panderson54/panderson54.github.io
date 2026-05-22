@@ -3,6 +3,9 @@ title:  "Modes of Nuclear Proliferation"
 classes: wide
 header:
   teaser: /assets/images/fordow.png
+  overlay_image: /assets/images/fordow.png
+  overlay_filter: 0
+  show_overlay_excerpt: false
 categories:
   - nuclear
 tags:
