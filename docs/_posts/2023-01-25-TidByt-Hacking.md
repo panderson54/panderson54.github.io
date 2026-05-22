@@ -12,7 +12,7 @@ tags:
   - journal
   - software
 ---
-![TidByt in action]({{ site.url }}{{ site.baseurl }}/assets/images/tidbyt_banner.jpg)
+
 
 Adventures with TidByt
 =====================
