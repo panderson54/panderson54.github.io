@@ -56,6 +56,8 @@ html[data-theme="dark"] .greedy-nav .visible-links a::before {
 
 html[data-theme="dark"] .greedy-nav__toggle {
   color: #eaeaea;
+  background-color: transparent;
+  border: none;
 }
 
 html[data-theme="dark"] .greedy-nav .hidden-links {

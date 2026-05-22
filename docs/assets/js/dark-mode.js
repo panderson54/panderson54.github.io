@@ -65,6 +65,10 @@
       } else {
         greedyNav.appendChild(btn);
       }
+      // Trigger greedy-nav to recalculate which links fit now that we've added
+      // the toggle button — without this the nav JS sees stale available width
+      // and leaves "About" partially visible instead of moving it to the dropdown.
+      window.dispatchEvent(new Event('resize'));
     } else {
       // Fallback: float in top-right corner
       btn.style.cssText = 'position:fixed;top:12px;right:12px;z-index:9999;';
