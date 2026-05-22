@@ -3,6 +3,9 @@ title:  "Always/Never Paradox and Platform Trust & Safety"
 classes: wide
 header:
   teaser: /assets/images/titan2.png
+  overlay_image: /assets/images/titan2.png
+  overlay_filter: 0
+  show_overlay_excerpt: false
 categories:
   - software
   - nuclear

@@ -5,6 +5,7 @@ header:
   teaser: /assets/images/crypto_blog_banner.svg
   overlay_image: /assets/images/crypto_blog_banner.svg
   overlay_filter: 0
+  show_overlay_excerpt: false
 categories:
   - software
 tags:

@@ -2,6 +2,9 @@
 title:  "What's this all about?"
 header:
   teaser: /assets/images/about_teaser.svg
+  overlay_image: /assets/images/about_teaser.svg
+  overlay_filter: 0
+  show_overlay_excerpt: false
 categories:
   - Admin
 tags:

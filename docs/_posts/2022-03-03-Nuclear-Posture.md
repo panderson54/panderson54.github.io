@@ -3,6 +3,9 @@ title:  "Nuclear Posture: A nuclear noobs intro"
 classes: wide
 header:
   teaser: /assets/images/d5_banner.png
+  overlay_image: /assets/images/d5_banner.png
+  overlay_filter: 0
+  show_overlay_excerpt: false
 categories:
   - Nuclear
 tags:
