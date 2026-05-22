@@ -11,7 +11,6 @@ categories:
 tags:
   - nuclear
 ---
-![Fordow MOP]({{ site.url }}{{ site.baseurl }}/assets/images/fordow.png)
 
 Modes of Nuclear Proliferation
 ============
