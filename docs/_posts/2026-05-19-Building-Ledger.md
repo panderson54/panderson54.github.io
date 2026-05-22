@@ -5,6 +5,7 @@ header:
   overlay_image: /assets/images/claude_header_option3.svg
   overlay_filter: 0
   teaser: /assets/images/claude_header_option3.svg
+  show_overlay_excerpt: false
 categories:
   - software
 tags:
