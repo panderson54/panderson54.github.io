@@ -39,37 +39,6 @@
   <circle cx="1650" cy="310" r="340" fill="#10b981" fill-opacity="0.07" filter="url(#softglow)"/>
   <circle cx="900"  cy="700" r="200" fill="#06b6d4" fill-opacity="0.03" filter="url(#softglow)"/>
 
-  <!-- Hex/binary matrix — top band -->
-  <g font-family="'Courier New', Courier, monospace" font-size="13" fill="#06b6d4">
-    <text x="30"   y="55"  fill-opacity="0.07">A9 3F 7B 2C E1 04 88 D5 6A F3 B2 19 C7 5E 40 82 D0 71</text>
-    <text x="900"  y="55"  fill-opacity="0.05">01001101 01100101 01110011 01110011 01100001 01100111</text>
-    <text x="1700" y="55"  fill-opacity="0.06">FF 12 C4 9E 73</text>
-
-    <text x="55"   y="100" fill="#10b981" fill-opacity="0.06">01000101 01101110 01100011 01110010 01111001 01110000 01110100</text>
-    <text x="760"  y="100" fill-opacity="0.05">7E 4B D3 9A 61 2F 88 C0 35 F7 4A B8 2D 91 6C E2 18</text>
-    <text x="1560" y="100" fill="#10b981" fill-opacity="0.05">10110011 00101110 11010</text>
-
-    <text x="30"   y="145" fill-opacity="0.05">C5 82 1A E9 4F 77 B3 0D 56 92 E3 1F 6D A4 28 CF 53 B9</text>
-    <text x="730"  y="145" fill="#10b981" fill-opacity="0.05">10100110 01011101 11000011 00010111 10111010 01001100</text>
-    <text x="1480" y="145" fill-opacity="0.06">69 F4 2E 8B D1 57 A0 3C F6 21</text>
-  </g>
-
-  <!-- Hex/binary matrix — bottom band -->
-  <g font-family="'Courier New', Courier, monospace" font-size="13" fill="#06b6d4">
-    <text x="45"   y="660" fill-opacity="0.07">3E A7 C1 5F 8D 24 90 B6 E3 17 6B F8 49 AC 72 1D 85 3A</text>
-    <text x="780"  y="660" fill="#10b981" fill-opacity="0.05">11110000 00111100 10011001 01010101 00001111 10100010</text>
-    <text x="1540" y="660" fill-opacity="0.06">7A F2 43 BC 6E D9 20 5C</text>
-
-    <text x="65"   y="705" fill="#10b981" fill-opacity="0.06">01010011 01100101 01100011 01110010 01100101 01110100</text>
-    <text x="650"  y="705" fill-opacity="0.05">E4 7C 29 A5 80 F1 3B 68 C2 4E 97 2A 65 B3 0F 74 D6</text>
-    <text x="1400" y="705" fill="#10b981" fill-opacity="0.05">10011010 01000111 11101100 00110001 01</text>
-    <text x="1800" y="705" fill-opacity="0.06">C8 4E</text>
-
-    <text x="30"   y="750" fill-opacity="0.06">8F 53 B1 E7 2C 94 6A 0D F5 3B A2 79 4E C6 11 88 30 DA</text>
-    <text x="760"  y="750" fill="#10b981" fill-opacity="0.05">01111001 10100101 00110110 11001010 01010000 11100011</text>
-    <text x="1510" y="750" fill-opacity="0.06">D3 60 9B 47 F2 1E 8A C5 33</text>
-  </g>
-
   <!-- Subtle grid lines -->
   <g stroke="#ffffff" stroke-opacity="0.025" stroke-width="1">
     <line x1="0"    y1="200" x2="2000" y2="200"/>
@@ -127,70 +96,6 @@
     <circle cx="1830" cy="340" r="3" fill="#10b981" fill-opacity="0.4"/>
     <polyline points="1724,450 1775,450 1775,510 1840,510"/>
     <circle cx="1840" cy="510" r="3" fill="#10b981" fill-opacity="0.4"/>
-  </g>
-
-  <!-- ============================== -->
-  <!--  MAIN TEXT                     -->
-  <!-- ============================== -->
-
-  <!-- "Let's talk" -->
-  <text x="130" y="300"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="88" font-weight="700"
-        fill="#ffffff" letter-spacing="-2">Let's talk</text>
-
-  <!-- "Crypto[graphy]" — full text in cyan+glow underneath, white "Crypto" on top -->
-  <text x="130" y="398"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="88" font-weight="700"
-        fill="#06b6d4" letter-spacing="-2"
-        filter="url(#textglow)">Crypto[graphy]</text>
-  <text x="130" y="398"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="88" font-weight="700"
-        fill="#ffffff" letter-spacing="-2">Crypto</text>
-
-  <!-- Accent underline -->
-  <rect x="130" y="420" width="500" height="3" fill="url(#cyanGrad)" rx="1.5"/>
-
-  <!-- Subtitle -->
-  <text x="130" y="460"
-        font-family="'Segoe UI', Arial, sans-serif"
-        font-size="21" font-weight="300"
-        fill="#475569" letter-spacing="5">THE ART OF HIDDEN MESSAGES</text>
-
-  <!-- Caesar cipher demo -->
-  <g font-family="'Courier New', Courier, monospace" font-size="17">
-    <text x="130" y="522" fill="#64748b">HELLO</text>
-    <text x="232" y="522" fill="#f59e0b" fill-opacity="0.75">  -shift+3->  </text>
-    <text x="436" y="522" fill="#06b6d4" fill-opacity="0.9" filter="url(#glow)">KHOOR</text>
-    <text x="546" y="522" fill="#475569" font-size="14" fill-opacity="0.55">  // Caesar cipher</text>
-  </g>
-
-  <!-- RSA formula -->
-  <g font-family="'Courier New', Courier, monospace" fill="#334155" fill-opacity="0.8">
-    <text x="130" y="557" font-size="17" letter-spacing="1">C = M</text>
-    <text x="216" y="548" font-size="11">e</text>
-    <text x="226" y="557" font-size="17" letter-spacing="1"> mod n</text>
-    <text x="340" y="557" font-size="14" fill-opacity="0.5">  // RSA encryption</text>
-  </g>
-
-  <!-- Tags -->
-  <g font-family="'Segoe UI', Arial, sans-serif" font-size="13" letter-spacing="2">
-    <rect x="130" y="596" width="172" height="30" rx="4"
-          fill="#06b6d4" fill-opacity="0.1"
-          stroke="#06b6d4" stroke-opacity="0.45" stroke-width="1"/>
-    <text x="216" y="616" fill="#06b6d4" fill-opacity="0.9" text-anchor="middle">CRYPTOGRAPHY</text>
-
-    <rect x="316" y="596" width="110" height="30" rx="4"
-          fill="#10b981" fill-opacity="0.1"
-          stroke="#10b981" stroke-opacity="0.45" stroke-width="1"/>
-    <text x="371" y="616" fill="#10b981" fill-opacity="0.9" text-anchor="middle">SECURITY</text>
-
-    <rect x="440" y="596" width="62" height="30" rx="4"
-          fill="#f59e0b" fill-opacity="0.1"
-          stroke="#f59e0b" stroke-opacity="0.45" stroke-width="1"/>
-    <text x="471" y="616" fill="#f59e0b" fill-opacity="0.9" text-anchor="middle">RSA</text>
   </g>
 
   <!-- Bottom accent bar -->
