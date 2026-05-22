@@ -13,10 +13,6 @@ tags:
   - software
 ---
 
-
-Adventures with TidByt
-=====================
-
 TitByt is this pixel based display with a set of dev tools allowing you to make your own apps for it. Basically it's a fancy clock that you can program. I like how it looks and I'd been wanting to mess with a connected display for my home office for a while and to be honest I'm much handier with code than I am with a soldering iron so this seemed like a good fit.
 
 https://tidbyt.com/ 

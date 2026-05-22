@@ -14,9 +14,6 @@ tags:
   - platforms
 ---
 
-Always/Never
-============
-
 Always/never is a concept coined in the midst of the Cold War as the US grappled with how to safely manage its nuclear weapons while keeping them ready for immediate use as a deterrent. The problem is how to ensure that an accidental nuclear use cannot happen, whether through negligence, sabotage, or even unauthorized use while making sure that an authorized user could launch a live warhead in minutes if needed.  
 
 >"The need for a nuclear weapon to be safe and the need for it to be reliable were often in conflict. A safety mechanism that made a bomb less likely to explode during an accident could also, during wartime, render it more likely to be a dud. The contradiction between these two design goals was succinctly expressed by the words “always/never.” Ideally, a nuclear weapon would always detonate when it was supposed to—and never detonate when it wasn’t supposed to.”"

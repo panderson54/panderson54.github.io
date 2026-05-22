@@ -12,9 +12,6 @@ tags:
   - nuclear
 ---
 
-Modes of Nuclear Proliferation
-============
-
 Nations seeking a nuclear weapon follow a few set paths to 'the bomb' ; these paths are a product of a given geopolitical, security, and domestic environment and dictate the speed, openness, and in most cases success of a nuclear program seeking a weapon. This is highly relevant today given the current citation in Iran and what I think will be a shift in strategy by the Iranians due to the failure of their deterrence model. All credit for these various models goes to Vipin Narang's book 'Seeking the Bomb; Strategies of Nuclear Proliferation'
 
 Passive Nuclear Proliferation Strategies
