@@ -1,0 +1,441 @@
+/* ============================================================
+   Dark mode overrides for Minimal Mistakes "default" skin
+   Applied when <html data-theme="dark"> is set
+   ============================================================ */
+
+/* Smooth transitions when toggling */
+html[data-theme="dark"],
+html[data-theme="dark"] *,
+html[data-theme="dark"] *::before,
+html[data-theme="dark"] *::after {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Base */
+html[data-theme="dark"] body {
+  background-color: #252a34;
+  color: #eaeaea;
+}
+
+/* Masthead / top nav */
+html[data-theme="dark"] .masthead {
+  background-color: #1e2129;
+  border-bottom: 1px solid #1a1e26;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="dark"] .masthead__inner-wrap {
+  background-color: #1e2129;
+}
+
+html[data-theme="dark"] .site-title,
+html[data-theme="dark"] .site-title:visited {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .site-subtitle {
+  color: #bfc5ca;
+}
+
+/* Navigation links */
+html[data-theme="dark"] .greedy-nav {
+  background-color: #1e2129;
+}
+
+html[data-theme="dark"] .greedy-nav a {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .greedy-nav a:hover {
+  color: #89cff0;
+}
+
+html[data-theme="dark"] .greedy-nav .visible-links a::before {
+  background: #89cff0;
+}
+
+html[data-theme="dark"] .greedy-nav__toggle {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links {
+  background-color: #1e2129;
+  border: 1px solid #1a1e26;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links a {
+  color: #eaeaea;
+  border-bottom: 1px solid #1a1e26;
+}
+
+html[data-theme="dark"] .greedy-nav .hidden-links a:hover {
+  background-color: #2e3444;
+  color: #89cff0;
+}
+
+/* Links */
+html[data-theme="dark"] a {
+  color: #89cff0;
+}
+
+html[data-theme="dark"] a:hover {
+  color: #b8e0f7;
+}
+
+html[data-theme="dark"] a:visited {
+  color: #a8d0ee;
+}
+
+/* Page / content area */
+html[data-theme="dark"] .page {
+  background-color: #252a34;
+}
+
+html[data-theme="dark"] .page__title {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .page__lead,
+html[data-theme="dark"] .page__content {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .page__content p,
+html[data-theme="dark"] .page__content li,
+html[data-theme="dark"] .page__content dt,
+html[data-theme="dark"] .page__content dd {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .page__content h1,
+html[data-theme="dark"] .page__content h2,
+html[data-theme="dark"] .page__content h3,
+html[data-theme="dark"] .page__content h4,
+html[data-theme="dark"] .page__content h5,
+html[data-theme="dark"] .page__content h6 {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .page__content h2 {
+  border-bottom: 1px solid #1a1e26;
+}
+
+/* Sidebar / author */
+html[data-theme="dark"] .sidebar {
+  background-color: #252a34;
+}
+
+html[data-theme="dark"] .author__name {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .author__bio {
+  color: #bfc5ca;
+}
+
+html[data-theme="dark"] .author__urls-wrapper button {
+  color: #bfc5ca;
+  border: 1px solid #1a1e26;
+  background-color: #2e3444;
+}
+
+html[data-theme="dark"] .author__urls {
+  background-color: #1e2129;
+  border: 1px solid #1a1e26;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .author__urls li a {
+  color: #bfc5ca;
+}
+
+html[data-theme="dark"] .author__urls li a:hover {
+  color: #89cff0;
+}
+
+/* Archive / post list */
+html[data-theme="dark"] .archive {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .archive__item-title a {
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .archive__item-title a:hover {
+  color: #89cff0;
+}
+
+html[data-theme="dark"] .archive__item-excerpt {
+  color: #bfc5ca;
+}
+
+html[data-theme="dark"] .list__item .page__meta,
+html[data-theme="dark"] .archive__item .page__meta {
+  color: #6f777d;
+}
+
+html[data-theme="dark"] .entries-list .list__item {
+  border-bottom: 1px solid #1a1e26;
+}
+
+/* Recent posts on home page */
+html[data-theme="dark"] h3.archive__subtitle {
+  color: #eaeaea;
+  border-bottom: 1px solid #1a1e26;
+}
+
+/* Page meta (reading time, date, tags) */
+html[data-theme="dark"] .page__meta {
+  color: #6f777d;
+}
+
+html[data-theme="dark"] .page__meta a {
+  color: #6f777d;
+}
+
+html[data-theme="dark"] .page__meta a:hover {
+  color: #89cff0;
+}
+
+html[data-theme="dark"] .page__taxonomy-item {
+  background-color: #2e3444;
+  color: #bfc5ca;
+  border: 1px solid #1a1e26;
+}
+
+html[data-theme="dark"] .page__taxonomy-item:hover {
+  background-color: #3a4156;
+  color: #89cff0;
+}
+
+/* Buttons */
+html[data-theme="dark"] .btn {
+  background-color: #2e3444;
+  color: #eaeaea;
+  border: 1px solid #1a1e26;
+}
+
+html[data-theme="dark"] .btn:hover {
+  background-color: #3a4156;
+  color: #89cff0;
+}
+
+html[data-theme="dark"] .btn--primary {
+  background-color: #3c6f94;
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .btn--primary:hover {
+  background-color: #4a82a8;
+}
+
+/* Code blocks */
+html[data-theme="dark"] code,
+html[data-theme="dark"] kbd,
+html[data-theme="dark"] samp {
+  background-color: #1e2129;
+  color: #b8e0f7;
+  border: 1px solid #1a1e26;
+}
+
+html[data-theme="dark"] pre {
+  background-color: #1e2129;
+  border: 1px solid #1a1e26;
+}
+
+html[data-theme="dark"] pre code {
+  background-color: transparent;
+  border: none;
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .highlight {
+  background-color: #1e2129;
+}
+
+html[data-theme="dark"] .highlight pre {
+  background-color: #1e2129;
+}
+
+/* Tables */
+html[data-theme="dark"] table {
+  border-color: #1a1e26;
+}
+
+html[data-theme="dark"] th {
+  background-color: #2e3444;
+  color: #eaeaea;
+  border-color: #1a1e26;
+}
+
+html[data-theme="dark"] td {
+  color: #eaeaea;
+  border-color: #1a1e26;
+}
+
+html[data-theme="dark"] tr:nth-child(even) td {
+  background-color: #2a2f3d;
+}
+
+/* Blockquotes */
+html[data-theme="dark"] blockquote {
+  background-color: #1e2129;
+  border-left-color: #89cff0;
+  color: #bfc5ca;
+}
+
+/* HR */
+html[data-theme="dark"] hr {
+  border-color: #1a1e26;
+}
+
+/* Footer */
+html[data-theme="dark"] .page__footer {
+  background-color: #1e2129;
+  color: #6f777d;
+}
+
+html[data-theme="dark"] .page__footer-copyright {
+  color: #6f777d;
+}
+
+html[data-theme="dark"] .page__footer a {
+  color: #bfc5ca;
+}
+
+html[data-theme="dark"] .page__footer a:hover {
+  color: #89cff0;
+}
+
+html[data-theme="dark"] .page__footer-follow .social-icons .svg-inline--fa {
+  color: #bfc5ca;
+}
+
+/* Breadcrumbs */
+html[data-theme="dark"] .breadcrumbs {
+  background-color: #2e3444;
+  border-bottom: 1px solid #1a1e26;
+}
+
+html[data-theme="dark"] .breadcrumbs a {
+  color: #bfc5ca;
+}
+
+/* Search */
+html[data-theme="dark"] .search-content {
+  background-color: #252a34;
+}
+
+html[data-theme="dark"] .search-content__form .search-input {
+  background-color: #1e2129;
+  border: 1px solid #1a1e26;
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] #search-input {
+  background-color: #1e2129;
+  color: #eaeaea;
+  border: 1px solid #1a1e26;
+}
+
+/* Notices */
+html[data-theme="dark"] .notice {
+  background-color: #2e3444;
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .notice--primary {
+  background-color: #1e3548;
+}
+
+html[data-theme="dark"] .notice--info {
+  background-color: #1e3040;
+}
+
+html[data-theme="dark"] .notice--warning {
+  background-color: #3d2e10;
+}
+
+html[data-theme="dark"] .notice--danger {
+  background-color: #3d1010;
+}
+
+html[data-theme="dark"] .notice--success {
+  background-color: #102d10;
+}
+
+/* Pagination */
+html[data-theme="dark"] .pagination a,
+html[data-theme="dark"] .pagination__item {
+  background-color: #2e3444;
+  color: #eaeaea;
+  border-color: #1a1e26;
+}
+
+html[data-theme="dark"] .pagination a:hover {
+  background-color: #3a4156;
+  color: #89cff0;
+}
+
+html[data-theme="dark"] .pagination__item--disabled {
+  background-color: #1e2129;
+  color: #6f777d;
+}
+
+/* ============================================================
+   Dark mode toggle button
+   ============================================================ */
+
+.dark-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin-left: 8px;
+  background: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  color: inherit;
+  font-size: 16px;
+  line-height: 1;
+  vertical-align: middle;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: rgba(128, 128, 128, 0.15);
+  border-color: rgba(128, 128, 128, 0.5);
+  transform: scale(1.05);
+}
+
+.dark-mode-toggle:focus {
+  outline: 2px solid #89cff0;
+  outline-offset: 2px;
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
+}
+
+html[data-theme="dark"] .dark-mode-toggle {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #eaeaea;
+}
+
+html[data-theme="dark"] .dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* SVG icons inside the button */
+.dark-mode-toggle svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
+}

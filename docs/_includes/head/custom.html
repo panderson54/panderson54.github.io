@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/assets/css/dark-mode.css">
+<script>
+  // Apply saved/preferred theme before first paint to avoid flash
+  (function () {
+    var stored = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (stored === 'dark' || (!stored && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
+<script src="/assets/js/dark-mode.js" defer></script>
