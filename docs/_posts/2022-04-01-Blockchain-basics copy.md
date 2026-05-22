@@ -13,7 +13,6 @@ tags:
   - blockchain
   - software
 ---
-![Git History Banner]({{ site.url }}{{ site.baseurl }}/assets/images/githistory.png)
 
 I'm not a blockchain guy. Having written that in the immutable ink of the internet I can have it forever held against me when we all eventually upload our collective consciousness onto the great ledger in the sky. Criticism, skepticism, or even gentle probing of the relevance of blockchain technologies in all facets of life is typically met with a mixture of shock and pity by its evangelists. That said I am not alone in my skepticism and there is a growing counter weight to the "common knowledge" that the blockchain will revolutionize everything.
 
