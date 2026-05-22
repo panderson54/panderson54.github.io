@@ -13,7 +13,6 @@ tags:
   - nuclear
   - platforms
 ---
-![Titan 2 Missile]({{ site.url }}{{ site.baseurl }}/assets/images/titan2.png)
 
 Always/Never
 ============
