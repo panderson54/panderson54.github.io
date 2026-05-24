@@ -18,10 +18,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "Patrick Anderson"
 title_separator          : "-"
-subtitle                 : "mostly ramblings"
+subtitle                 : "mostly musings"
 name                     : "Patrick Anderson"
-description              : "Patrick Anderson"
-url                      : "https://panderson54.github.io/"
+description              : "Engineering leader, occasional writer. Based in Seattle."
+url                      : "https://pmanderson.dev"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "panderson54/panderson54.github.io"
 teaser                   : "/assets/images/anon_profile.png"
@@ -104,7 +104,7 @@ analytics:
 author:
   name             : "Patrick Anderson"
   avatar           : "/assets/images/kyoto_profile.jpg"
-  bio              : "World's **okayest** software engineer."
+  bio              :
   location         : "Seattle"
   email            : #"pmanderson54@gmail.com"
   links:
@@ -114,6 +114,9 @@ author:
     - label: "LinkedIn"
       icon: "fas fa-solid fa-briefcase"
       url: "https://www.linkedin.com/in/patrick-anderson-b377796b/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/panderson54"
     - label: "What I'm Reading"
       icon: "fas fa-solid fa-book"
       url: "https://www.goodreads.com/user/show/98246601-patrick-anderson"
@@ -121,24 +124,6 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
 
 
 # Reading Files
