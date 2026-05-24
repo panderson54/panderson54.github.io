@@ -3,7 +3,7 @@ title: "Hi, I'm Patrick."
 permalink: /about/
 ---
 
-I'm a software engineer and engineering leader based in Seattle. I've spent nearly a decade at Meta building high-scale advertising and guidance systems, and before that worked as a software consultant across a range of stacks and industries.
+I'm a software engineer and engineering leader based in Seattle. I've spent nearly a decade at Meta building highly scaled systems supporting advertisers, and before that worked as a software consultant across a range of stacks and industries.
 
 
 I thrive on ambiguity, embrace complexity, and have deep experience translating difficult business problems into impactful software. I'm adept at communicating across technical and non-technical audiences and have led large interdisciplinary teams as both an individual contributor and as a leader.

@@ -3,4 +3,4 @@ layout: home
 author_profile: true
 ---
 
-Hi, I'm Patrick! I'm an engineering leader at Meta in Seattle, where I've spent nearly a decade building high-scale advertising and guidance systems. Before that I worked as a software consultant, which gave me early exposure to a wide range of stacks and industries. I have a keen interest in international relations, national security, and nuclear policy, and at heart I'm a technologist who likes to tinker. 
+Hi, I'm Patrick! I'm an engineering leader at Meta in Seattle, where I've spent nearly a decade building highly scaled systems supporting advertisers. Before that I worked as a software consultant, which gave me early exposure to a wide range of stacks and industries. I have a keen interest in international relations, national security, and nuclear policy, and at heart I'm a technologist who likes to tinker. 
