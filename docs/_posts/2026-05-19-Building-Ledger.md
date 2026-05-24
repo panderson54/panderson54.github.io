@@ -114,4 +114,4 @@ The Google Sheet is archived but not deleted.
 
 ---
 
-*Ledger is open source at [github.com/panderson54/ledger](https://github.com/panderson54/ledger). Self-hosted, no authentication layer, designed for use on a trusted local network.*
+*Ledger is open source at [github.com/panderson54/ledger_finance](https://github.com/panderson54/ledger_finance). Self-hosted, no authentication layer, designed for use on a trusted local network.*
