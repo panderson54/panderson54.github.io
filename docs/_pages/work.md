@@ -3,6 +3,10 @@ title: "Work"
 permalink: /work/
 ---
 
+Talking to others about things you've learned is often a sure way of sorting out how well you've actually learned something. That's the entire reason this site exists — as a vehicle and a reason to explore, organize, and relearn through writing.
+
+---
+
 I'm a software engineer with nearly a decade of industry experience designing, building, and launching high-scale software across a variety of stacks and business sectors. I thrive on ambiguity, embrace complexity, and have deep experience translating difficult business problems into impactful software. I'm adept at communicating across technical and non-technical audiences and have led large interdisciplinary teams as both an individual contributor and an engineering manager.
 
 ---
