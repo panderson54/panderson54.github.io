@@ -1,0 +1,914 @@
+---
+layout: none
+permalink: /ledger/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ledger — Self-Hosted Personal Finance</title>
+  <meta name="description" content="Track your net worth, savings rate, and portfolio allocation. Self-hosted, open source, runs on a Raspberry Pi. Five minutes a month.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #07091a;
+      --bg-alt:       #09111f;
+      --bg-card:      #0d1528;
+      --border:       rgba(91, 156, 246, 0.12);
+      --border-hi:    rgba(91, 156, 246, 0.28);
+      --blue:         #5b9cf6;
+      --blue-br:      #7eb8ff;
+      --blue-dim:     rgba(91, 156, 246, 0.09);
+      --green:        #34d399;
+      --green-dim:    rgba(52, 211, 153, 0.08);
+      --gold:         #f59e0b;
+      --purple:       #a78bfa;
+      --pink:         #f472b6;
+      --text:         #dde8f8;
+      --text-2:       #8a9bc0;
+      --text-3:       #445577;
+      --radius:       14px;
+      --radius-lg:    22px;
+      --max-w:        1080px;
+      --ease:         0.2s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: var(--blue-br); }
+
+    /* ── NAV ────────────────────────────────── */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 36px; height: 62px;
+      background: rgba(7, 9, 26, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-back {
+      display: flex; align-items: center; gap: 7px;
+      color: var(--text-2); font-size: 14px; font-weight: 500;
+      transition: color var(--ease);
+    }
+    .nav-back:hover { color: var(--text); }
+    .nav-back svg {
+      width: 15px; height: 15px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    .nav-wordmark {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      font-size: 17px; font-weight: 800; color: var(--text);
+      letter-spacing: -0.03em;
+    }
+    .nav-wordmark span { color: var(--blue); }
+
+    .nav-gh {
+      display: flex; align-items: center; gap: 7px;
+      padding: 7px 16px;
+      background: var(--blue-dim);
+      border: 1px solid var(--border-hi);
+      border-radius: 8px;
+      color: var(--blue-br); font-size: 13px; font-weight: 600;
+      transition: background var(--ease), border-color var(--ease);
+    }
+    .nav-gh:hover {
+      background: rgba(91,156,246,0.16);
+      border-color: var(--blue);
+      color: var(--blue-br);
+    }
+    .nav-gh svg { width: 15px; height: 15px; fill: currentColor; }
+
+    /* ── HERO ───────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 100px 36px 80px;
+      position: relative; overflow: hidden;
+    }
+
+    /* Subtle radial glows */
+    .hero::before {
+      content: '';
+      position: absolute; top: -240px; right: -160px;
+      width: 720px; height: 720px;
+      background: radial-gradient(circle, rgba(91,156,246,0.09) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -120px; left: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(52,211,153,0.055) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
+    /* Hero background SVG grid */
+    .hero-grid {
+      position: absolute; inset: 0; pointer-events: none;
+      opacity: 0.35;
+    }
+
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 72px; align-items: center;
+      position: relative; z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 13px;
+      background: var(--green-dim);
+      border: 1px solid rgba(52,211,153,0.22);
+      border-radius: 100px;
+      font-size: 11.5px; font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.07em; text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+    .badge-dot {
+      width: 6px; height: 6px;
+      background: var(--green); border-radius: 50%;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.45;transform:scale(.7)} }
+
+    .hero h1 {
+      font-size: clamp(38px, 4.8vw, 62px);
+      font-weight: 800; letter-spacing: -0.03em; line-height: 1.08;
+      margin-bottom: 22px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(130deg, var(--blue) 0%, #9ecfff 45%, var(--green) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 17px; color: var(--text-2);
+      max-width: 440px; line-height: 1.72;
+      margin-bottom: 38px;
+    }
+
+    .hero-stats {
+      display: flex; gap: 28px;
+      margin-bottom: 38px; flex-wrap: wrap;
+    }
+    .hero-stat { display: flex; flex-direction: column; gap: 2px; }
+    .hero-stat-val {
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.03em; color: var(--text);
+    }
+    .hero-stat-label { font-size: 12px; color: var(--text-3); }
+
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 13px 26px;
+      background: var(--blue); color: #07091a;
+      font-weight: 700; font-size: 14.5px;
+      border-radius: 10px;
+      box-shadow: 0 0 28px rgba(91,156,246,0.32);
+      transition: background var(--ease), transform var(--ease), box-shadow var(--ease);
+    }
+    .btn-primary:hover {
+      background: var(--blue-br); color: #07091a;
+      transform: translateY(-1px);
+      box-shadow: 0 0 40px rgba(91,156,246,0.46);
+    }
+    .btn-primary svg { width: 17px; height: 17px; fill: currentColor; }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 13px 26px;
+      border: 1px solid var(--border-hi);
+      color: var(--text-2); font-weight: 600; font-size: 14.5px;
+      border-radius: 10px;
+      transition: border-color var(--ease), color var(--ease), background var(--ease);
+    }
+    .btn-ghost:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--blue-dim);
+    }
+    .btn-ghost svg {
+      width: 15px; height: 15px;
+      stroke: currentColor; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+
+    /* Hero screenshot frame */
+    .hero-frame {
+      position: relative;
+      animation: float 5s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)}
+    }
+
+    .hero-frame-inner {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(91,156,246,0.04),
+        0 24px 64px rgba(0,0,0,0.65),
+        0 0 80px rgba(91,156,246,0.09);
+    }
+
+    .frame-bar {
+      padding: 11px 15px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.02);
+    }
+    .frame-dot { width: 9px; height: 9px; border-radius: 50%; }
+    .frame-dot:nth-child(1){background:#ff5f57}
+    .frame-dot:nth-child(2){background:#febc2e}
+    .frame-dot:nth-child(3){background:#28c840}
+
+    .hero-frame-inner img { width: 100%; display: block; }
+
+    .hero-glow {
+      position: absolute; bottom: -50px; left: 50%;
+      transform: translateX(-50%);
+      width: 75%; height: 50px;
+      background: rgba(91,156,246,0.18);
+      filter: blur(22px); border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* ── SECTION BASE ───────────────────────── */
+    section { padding: 96px 36px; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+
+    .eyebrow {
+      font-size: 11.5px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 14px;
+    }
+
+    .section-h2 {
+      font-size: clamp(28px, 3.2vw, 44px);
+      font-weight: 800; letter-spacing: -0.025em; line-height: 1.13;
+      margin-bottom: 18px;
+    }
+
+    .section-lead {
+      font-size: 16.5px; color: var(--text-2);
+      max-width: 520px; line-height: 1.72;
+    }
+
+    /* ── FEATURES ───────────────────────────── */
+    .features-section {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+      margin-top: 54px;
+    }
+
+    .feat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      transition: border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+    }
+    .feat-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(0,0,0,0.36), 0 0 24px rgba(91,156,246,0.06);
+    }
+
+    .feat-icon {
+      width: 46px; height: 46px;
+      border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--blue-dim);
+      margin-bottom: 18px;
+    }
+    .feat-icon.g { background: var(--green-dim); }
+    .feat-icon svg { width: 24px; height: 24px; }
+
+    .feat-name {
+      font-size: 15.5px; font-weight: 700;
+      margin-bottom: 9px; color: var(--text);
+    }
+    .feat-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.65; }
+
+    /* ── PRIVACY BAND ───────────────────────── */
+    .privacy-band {
+      background: linear-gradient(125deg, rgba(52,211,153,0.045) 0%, rgba(91,156,246,0.04) 100%);
+      border-top: 1px solid rgba(52,211,153,0.14);
+      border-bottom: 1px solid rgba(52,211,153,0.14);
+      padding: 64px 36px;
+    }
+    .privacy-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; gap: 48px;
+    }
+    .privacy-icon {
+      flex-shrink: 0;
+      width: 78px; height: 78px;
+      border-radius: 20px;
+      background: rgba(52,211,153,0.09);
+      border: 1px solid rgba(52,211,153,0.18);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .privacy-icon svg { width: 38px; height: 38px; }
+    .privacy-copy h3 { font-size: 21px; font-weight: 700; margin-bottom: 9px; }
+    .privacy-copy p { font-size: 15px; color: var(--text-2); max-width: 580px; line-height: 1.72; }
+
+    /* ── SCREENSHOTS ────────────────────────── */
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 54px;
+    }
+
+    .ss-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: border-color var(--ease), box-shadow var(--ease);
+    }
+    .ss-card:hover {
+      border-color: var(--border-hi);
+      box-shadow: 0 18px 48px rgba(0,0,0,0.45), 0 0 32px rgba(91,156,246,0.07);
+    }
+    .ss-card.wide { grid-column: 1 / -1; }
+
+    .ss-bar {
+      padding: 11px 15px;
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.015);
+    }
+    .ss-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .ss-dot:nth-child(1){background:#ff5f57}
+    .ss-dot:nth-child(2){background:#febc2e}
+    .ss-dot:nth-child(3){background:#28c840}
+    .ss-label {
+      margin-left: auto;
+      font-size: 10.5px; font-weight: 600;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--text-3);
+    }
+    .ss-card img { width: 100%; display: block; }
+    .ss-caption {
+      padding: 14px 18px;
+      font-size: 13px; color: var(--text-2);
+      border-top: 1px solid var(--border);
+    }
+    .ss-caption strong { color: var(--text); font-weight: 600; }
+
+    /* ── HOW IT WORKS ───────────────────────── */
+    .how-section {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .steps {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 40px; margin-top: 58px;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute; top: 39px;
+      left: calc(33.33% - 10px); right: calc(33.33% - 10px);
+      height: 1px;
+      background: linear-gradient(90deg, var(--border) 0%, var(--border-hi) 50%, var(--border) 100%);
+    }
+
+    .step-num {
+      width: 78px; height: 78px; border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-hi);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; font-weight: 800; color: var(--blue);
+      margin-bottom: 22px;
+      position: relative; z-index: 1;
+    }
+    .step-title { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+    .step-desc { font-size: 14px; color: var(--text-2); line-height: 1.66; }
+
+    /* ── TECH STACK ─────────────────────────── */
+    .tech-grid {
+      display: flex; flex-wrap: wrap; gap: 11px;
+      margin-top: 42px;
+    }
+    .tech-pill {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 13.5px; font-weight: 500; color: var(--text-2);
+      transition: border-color var(--ease), color var(--ease);
+    }
+    .tech-pill:hover { border-color: var(--border-hi); color: var(--text); }
+    .tp-dot { width: 6px; height: 6px; border-radius: 50%; }
+    .tp-b  { background: var(--blue); }
+    .tp-g  { background: var(--green); }
+    .tp-y  { background: var(--gold); }
+    .tp-p  { background: var(--purple); }
+    .tp-pk { background: var(--pink); }
+
+    /* ── CTA ────────────────────────────────── */
+    .cta-section {
+      text-align: center;
+      padding: 120px 36px;
+      position: relative; overflow: hidden;
+    }
+    .cta-glow {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 640px; height: 320px;
+      background: radial-gradient(ellipse, rgba(91,156,246,0.11) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .cta-section h2 {
+      font-size: clamp(30px, 3.8vw, 50px);
+      font-weight: 800; letter-spacing: -0.025em; line-height: 1.12;
+      margin-bottom: 18px; position: relative;
+    }
+    .cta-section p {
+      font-size: 17px; color: var(--text-2);
+      margin-bottom: 46px; position: relative;
+    }
+    .cta-btns {
+      display: flex; gap: 14px; justify-content: center;
+      flex-wrap: wrap; position: relative;
+    }
+
+    /* ── FOOTER ─────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 36px;
+      text-align: center;
+      font-size: 13px; color: var(--text-3);
+    }
+    footer a { color: var(--text-2); }
+    footer a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 860px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 52px; }
+      .screenshots-grid { grid-template-columns: 1fr; }
+      .ss-card.wide { grid-column: auto; }
+      .steps { grid-template-columns: 1fr; }
+      .steps::before { display: none; }
+      .privacy-inner { flex-direction: column; gap: 22px; text-align: center; }
+      .privacy-copy p { margin: 0 auto; }
+      .nav-wordmark { display: none; }
+    }
+    @media (max-width: 540px) {
+      .nav { padding: 0 20px; }
+      section { padding: 72px 20px; }
+      .hero { padding: 88px 20px 64px; }
+      .hero-ctas { flex-direction: column; }
+      .cta-section { padding: 80px 20px; }
+      .privacy-band { padding: 52px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a href="/" class="nav-back">
+    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    pmanderson.dev
+  </a>
+
+  <span class="nav-wordmark">Le<span>d</span>ger</span>
+
+  <a href="https://github.com/panderson54/ledger_finance" target="_blank" rel="noopener" class="nav-gh">
+    <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
+    GitHub
+  </a>
+</nav>
+
+
+<!-- ── HERO ── -->
+<section class="hero">
+
+  <!-- Subtle dot-grid background SVG -->
+  <svg class="hero-grid" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="dotFade" cx="50%" cy="50%" r="55%">
+        <stop offset="0%" stop-color="#5b9cf6" stop-opacity="0.6"/>
+        <stop offset="100%" stop-color="#5b9cf6" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <!-- Dot grid -->
+    <g fill="url(#dotFade)">
+      <circle cx="100" cy="100" r="1.5"/>  <circle cx="200" cy="100" r="1.5"/>  <circle cx="300" cy="100" r="1.5"/>
+      <circle cx="400" cy="100" r="1.5"/>  <circle cx="500" cy="100" r="1.5"/>  <circle cx="600" cy="100" r="1.5"/>
+      <circle cx="700" cy="100" r="1.5"/>  <circle cx="800" cy="100" r="1.5"/>  <circle cx="900" cy="100" r="1.5"/>
+      <circle cx="1000" cy="100" r="1.5"/> <circle cx="1100" cy="100" r="1.5"/>
+      <circle cx="100" cy="200" r="1.5"/>  <circle cx="200" cy="200" r="1.5"/>  <circle cx="300" cy="200" r="1.5"/>
+      <circle cx="400" cy="200" r="1.5"/>  <circle cx="500" cy="200" r="1.5"/>  <circle cx="600" cy="200" r="1.5"/>
+      <circle cx="700" cy="200" r="1.5"/>  <circle cx="800" cy="200" r="1.5"/>  <circle cx="900" cy="200" r="1.5"/>
+      <circle cx="1000" cy="200" r="1.5"/> <circle cx="1100" cy="200" r="1.5"/>
+      <circle cx="100" cy="300" r="1.5"/>  <circle cx="200" cy="300" r="1.5"/>  <circle cx="300" cy="300" r="1.5"/>
+      <circle cx="400" cy="300" r="1.5"/>  <circle cx="500" cy="300" r="1.5"/>  <circle cx="600" cy="300" r="1.5"/>
+      <circle cx="700" cy="300" r="1.5"/>  <circle cx="800" cy="300" r="1.5"/>  <circle cx="900" cy="300" r="1.5"/>
+      <circle cx="1000" cy="300" r="1.5"/> <circle cx="1100" cy="300" r="1.5"/>
+      <circle cx="100" cy="400" r="1.5"/>  <circle cx="200" cy="400" r="1.5"/>  <circle cx="300" cy="400" r="1.5"/>
+      <circle cx="400" cy="400" r="1.5"/>  <circle cx="500" cy="400" r="1.5"/>  <circle cx="600" cy="400" r="1.5"/>
+      <circle cx="700" cy="400" r="1.5"/>  <circle cx="800" cy="400" r="1.5"/>  <circle cx="900" cy="400" r="1.5"/>
+      <circle cx="1000" cy="400" r="1.5"/> <circle cx="1100" cy="400" r="1.5"/>
+      <circle cx="100" cy="500" r="1.5"/>  <circle cx="200" cy="500" r="1.5"/>  <circle cx="300" cy="500" r="1.5"/>
+      <circle cx="400" cy="500" r="1.5"/>  <circle cx="500" cy="500" r="1.5"/>  <circle cx="600" cy="500" r="1.5"/>
+      <circle cx="700" cy="500" r="1.5"/>  <circle cx="800" cy="500" r="1.5"/>  <circle cx="900" cy="500" r="1.5"/>
+      <circle cx="1000" cy="500" r="1.5"/> <circle cx="1100" cy="500" r="1.5"/>
+      <circle cx="100" cy="600" r="1.5"/>  <circle cx="200" cy="600" r="1.5"/>  <circle cx="300" cy="600" r="1.5"/>
+      <circle cx="400" cy="600" r="1.5"/>  <circle cx="500" cy="600" r="1.5"/>  <circle cx="600" cy="600" r="1.5"/>
+      <circle cx="700" cy="600" r="1.5"/>  <circle cx="800" cy="600" r="1.5"/>  <circle cx="900" cy="600" r="1.5"/>
+      <circle cx="1000" cy="600" r="1.5"/> <circle cx="1100" cy="600" r="1.5"/>
+    </g>
+  </svg>
+
+  <div class="hero-inner">
+    <!-- LEFT: copy -->
+    <div>
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open Source &nbsp;·&nbsp; v1.0 "Keynes"
+      </div>
+
+      <h1>Your finances.<br><em>Your data.</em><br>Your server.</h1>
+
+      <p class="hero-sub">Self-hosted personal finance tracking. Net worth, savings rate, portfolio allocation — all updated in five minutes at the end of the month, running on your own hardware.</p>
+
+      <!-- Key stats strip -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-val">~5 min</span>
+          <span class="hero-stat-label">per monthly update</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-val">0</span>
+          <span class="hero-stat-label">accounts required</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-val">100%</span>
+          <span class="hero-stat-label">local, your hardware</span>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="https://github.com/panderson54/ledger_finance" target="_blank" rel="noopener" class="btn-primary">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
+          Fork on GitHub
+        </a>
+        <a href="/software/building-ledger/" class="btn-ghost">
+          Read the build story
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: screenshot -->
+    <div class="hero-frame">
+      <div class="hero-frame-inner">
+        <div class="frame-bar">
+          <span class="frame-dot"></span>
+          <span class="frame-dot"></span>
+          <span class="frame-dot"></span>
+        </div>
+        <img src="/assets/images/ledger_hero_dark.png" alt="Ledger dashboard — net worth and portfolio overview">
+      </div>
+      <div class="hero-glow"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── FEATURES ── -->
+<section class="features-section">
+  <div class="section-inner">
+    <p class="eyebrow">What Ledger tracks</p>
+    <h2 class="section-h2">Everything you need.<br>Nothing you don't.</h2>
+    <p class="section-lead">Built for people who want the portfolio view, not the budgeting guilt trip. Deliberate scope. No spending categories, no debt calculators.</p>
+
+    <div class="features-grid">
+
+      <!-- Net Worth -->
+      <div class="feat-card">
+        <div class="feat-icon">
+          <!-- Bar chart + rising line -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2"  y="14" width="3" height="8" rx="1" fill="#5b9cf6" opacity=".4"/>
+            <rect x="7"  y="10" width="3" height="12" rx="1" fill="#5b9cf6" opacity=".6"/>
+            <rect x="12" y="6"  width="3" height="16" rx="1" fill="#5b9cf6" opacity=".8"/>
+            <rect x="17" y="2"  width="3" height="20" rx="1" fill="#5b9cf6"/>
+            <polyline points="2,11 7,7 12,9 19,3" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="19" cy="3" r="2" fill="#34d399"/>
+          </svg>
+        </div>
+        <p class="feat-name">Net Worth Tracking</p>
+        <p class="feat-desc">Monthly snapshots across cash, retirement, investments, real estate, and liabilities. Watch the trend over time with automatic calculations.</p>
+      </div>
+
+      <!-- Savings Rate -->
+      <div class="feat-card">
+        <div class="feat-icon">
+          <!-- Gauge / arc -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.93 19.07 A10 10 0 1 1 19.07 19.07" stroke="#5b9cf6" stroke-width="1.5" stroke-linecap="round" fill="none" opacity=".35"/>
+            <path d="M4.93 19.07 A10 10 0 0 1 16.24 6.76" stroke="#5b9cf6" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <line x1="12" y1="12" x2="15.5" y2="7.5" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="2.2" fill="#34d399"/>
+          </svg>
+        </div>
+        <p class="feat-name">Savings Rate</p>
+        <p class="feat-desc">Income vs. spending, broken down by account. One number that tells you how the month went. No categories, no granularity theater.</p>
+      </div>
+
+      <!-- Asset Allocation -->
+      <div class="feat-card">
+        <div class="feat-icon g">
+          <!-- Donut chart -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" stroke="#34d399" stroke-width="1.5" fill="none"/>
+            <!-- Segments approximated with stroke-dasharray on a circle (r=6, c=37.7) -->
+            <circle cx="12" cy="12" r="6" fill="none"
+              stroke="#34d399" stroke-width="4" stroke-dasharray="14 23.7"
+              stroke-dashoffset="0" transform="rotate(-90 12 12)"/>
+            <circle cx="12" cy="12" r="6" fill="none"
+              stroke="#5b9cf6" stroke-width="4" stroke-dasharray="9 28.7"
+              stroke-dashoffset="-14" transform="rotate(-90 12 12)"/>
+            <circle cx="12" cy="12" r="6" fill="none"
+              stroke="#a78bfa" stroke-width="4" stroke-dasharray="7 30.7"
+              stroke-dashoffset="-23" transform="rotate(-90 12 12)"/>
+            <circle cx="12" cy="12" r="6" fill="none"
+              stroke="#f59e0b" stroke-width="4" stroke-dasharray="7.7 30"
+              stroke-dashoffset="-30" transform="rotate(-90 12 12)"/>
+            <circle cx="12" cy="12" r="3.5" fill="#0d1528"/>
+          </svg>
+        </div>
+        <p class="feat-name">Asset Allocation</p>
+        <p class="feat-desc">Portfolio breakdown with drift analysis. Know your target allocation, see how far you've drifted, and get guidance on when to rebalance.</p>
+      </div>
+
+      <!-- FI Projections -->
+      <div class="feat-card">
+        <div class="feat-icon">
+          <!-- Rising line chart with target -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="3" y1="21" x2="21" y2="21" stroke="#445577" stroke-width="1"/>
+            <line x1="3" y1="15" x2="21" y2="15" stroke="#445577" stroke-width=".6" stroke-dasharray="2 2"/>
+            <line x1="3" y1="9"  x2="21" y2="9"  stroke="#445577" stroke-width=".6" stroke-dasharray="2 2"/>
+            <path d="M3 19 L7 16 L11 13 L15 9 L19 5 L21 3"
+              stroke="#5b9cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M3 19 L7 16 L11 13 L15 9 L19 5 L21 3 L21 21 L3 21 Z"
+              fill="rgba(91,156,246,0.08)"/>
+            <circle cx="21" cy="3" r="2.5" fill="#34d399"/>
+          </svg>
+        </div>
+        <p class="feat-name">FI Projections</p>
+        <p class="feat-desc">Model your path to financial independence using your actual savings rate and return assumptions — not a hypothetical portfolio.</p>
+      </div>
+
+      <!-- S&P Benchmark -->
+      <div class="feat-card">
+        <div class="feat-icon">
+          <!-- Two-line comparison chart -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="3" y1="21" x2="21" y2="21" stroke="#445577" stroke-width="1"/>
+            <!-- Portfolio line -->
+            <path d="M3 18 L6 14 L9 15 L12 9 L16 7 L19 4 L21 3"
+              stroke="#5b9cf6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- S&P 500 line dashed -->
+            <path d="M3 18 L6 16 L9 14 L12 12 L16 10 L19 9 L21 8"
+              stroke="#34d399" stroke-width="1.5" stroke-dasharray="3 2"
+              stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- Legend -->
+            <circle cx="5" cy="5"  r="1.5" fill="#5b9cf6"/>
+            <circle cx="11" cy="5" r="1.5" fill="#34d399"/>
+          </svg>
+        </div>
+        <p class="feat-name">S&P 500 Benchmark</p>
+        <p class="feat-desc">Compare your portfolio performance against the market over time. See the gap — and whether you're earning or trailing it.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── PRIVACY ── -->
+<div class="privacy-band">
+  <div class="privacy-inner">
+    <div class="privacy-icon">
+      <!-- Home server SVG -->
+      <svg viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="7" y="17" width="24" height="17" rx="3"
+          fill="rgba(52,211,153,0.12)" stroke="#34d399" stroke-width="1.5"/>
+        <polygon points="19,4 35,17 3,17"
+          fill="rgba(52,211,153,0.08)" stroke="#34d399" stroke-width="1.5" stroke-linejoin="round"/>
+        <rect x="11" y="21" width="9"  height="2" rx="1" fill="#34d399" opacity=".75"/>
+        <rect x="11" y="25.5" width="6"  height="2" rx="1" fill="#34d399" opacity=".5"/>
+        <rect x="11" y="30" width="8"  height="2" rx="1" fill="#34d399" opacity=".38"/>
+        <circle cx="25" cy="22" r="1.5" fill="#34d399"/>
+        <circle cx="25" cy="26.5" r="1.5" fill="#34d399" opacity=".6"/>
+        <circle cx="25" cy="31" r="1.5" fill="#34d399" opacity=".38"/>
+      </svg>
+    </div>
+    <div class="privacy-copy">
+      <h3>Your data never leaves your network.</h3>
+      <p>No accounts to create. No bank connections to authorize. No cloud sync to worry about. Ledger runs on your own hardware — a Raspberry Pi, an old laptop, whatever you have. Your financial data stays exactly where you put it.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── SCREENSHOTS ── -->
+<section>
+  <div class="section-inner">
+    <p class="eyebrow">The App</p>
+    <h2 class="section-h2">See it in action.</h2>
+    <p class="section-lead">Five minutes a month. Every number you actually need.</p>
+
+    <div class="screenshots-grid">
+
+      <!-- Dashboard — full width -->
+      <div class="ss-card wide">
+        <div class="ss-bar">
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-label">Dashboard</span>
+        </div>
+        <img src="/assets/images/ledger_hero.png"
+          alt="Ledger dashboard — net worth trend and monthly summary">
+        <div class="ss-caption">
+          <strong>Dashboard</strong> — Net worth trend, monthly savings rate, income vs. spending at a glance.
+        </div>
+      </div>
+
+      <!-- Projections -->
+      <div class="ss-card">
+        <div class="ss-bar">
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-label">Projections</span>
+        </div>
+        <img src="/assets/images/ledger_projections.png"
+          alt="Ledger projections — path to financial independence">
+        <div class="ss-caption">
+          <strong>Projections</strong> — FI timeline modeled from your actual savings rate and assumptions.
+        </div>
+      </div>
+
+      <!-- Portfolio charts -->
+      <div class="ss-card">
+        <div class="ss-bar">
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-label">Portfolio</span>
+        </div>
+        <img src="/assets/images/ledger_charts.png"
+          alt="Ledger portfolio charts — allocation and asset drift">
+        <div class="ss-caption">
+          <strong>Portfolio</strong> — Allocation breakdown and drift analysis to guide rebalancing decisions.
+        </div>
+      </div>
+
+      <!-- Monthly update — full width -->
+      <div class="ss-card wide">
+        <div class="ss-bar">
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-dot"></span>
+          <span class="ss-label">Monthly Update</span>
+        </div>
+        <img src="/assets/images/ledger_monthly_update.png"
+          alt="Ledger monthly data entry">
+        <div class="ss-caption">
+          <strong>Monthly Update</strong> — Deliberately blunt. Total income, total expenses. Done in five minutes — no categories, no line items.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how-section">
+  <div class="section-inner">
+    <p class="eyebrow">Getting started</p>
+    <h2 class="section-h2">Up and running<br>in an afternoon.</h2>
+    <p class="section-lead">Fork the repo and follow the setup guide. It's a Flask app backed by SQLite — if you can run Python, you can run Ledger.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Fork &amp; deploy</h3>
+        <p class="step-desc">Fork the repo, clone it to a Raspberry Pi or any Linux machine, and serve it with Gunicorn. The repo includes a systemd service file and a setup guide.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Import your data</h3>
+        <p class="step-desc">Drop in CSV exports from your bank and brokerage. Ledger handles whatever date format they use. Enter a ticker symbol and holdings are auto-classified via the Anthropic API.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Update monthly</h3>
+        <p class="step-desc">At month-end, enter total income and total expenses. Check your balances. That's it. Five minutes and you're looking at a full picture of where you stand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── TECH STACK ── -->
+<section>
+  <div class="section-inner">
+    <p class="eyebrow">Under the hood</p>
+    <h2 class="section-h2">Built on tools<br>you already know.</h2>
+    <p class="section-lead">No exotic dependencies. Python, Flask, SQLite. Readable code you can audit, fork, and modify to fit how you actually manage money.</p>
+
+    <div class="tech-grid">
+      <span class="tech-pill"><span class="tp-dot tp-b"></span>Python 3</span>
+      <span class="tech-pill"><span class="tp-dot tp-b"></span>Flask 3.0</span>
+      <span class="tech-pill"><span class="tp-dot tp-g"></span>SQLite</span>
+      <span class="tech-pill"><span class="tp-dot tp-g"></span>SQLAlchemy 2.0</span>
+      <span class="tech-pill"><span class="tp-dot tp-p"></span>Bootstrap 5</span>
+      <span class="tech-pill"><span class="tp-dot tp-y"></span>Plotly 5.18</span>
+      <span class="tech-pill"><span class="tp-dot tp-pk"></span>pandas 2.2</span>
+      <span class="tech-pill"><span class="tp-dot tp-y"></span>Anthropic API</span>
+      <span class="tech-pill"><span class="tp-dot tp-g"></span>Yahoo Finance</span>
+      <span class="tech-pill"><span class="tp-dot tp-b"></span>Gunicorn</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="cta-glow"></div>
+  <h2>Fork it. Build it.<br>Make it yours.</h2>
+  <p>Open source and free. No sign-up, no subscription, no data leaving your machine.</p>
+  <div class="cta-btns">
+    <a href="https://github.com/panderson54/ledger_finance" target="_blank" rel="noopener" class="btn-primary">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"/></svg>
+      View on GitHub
+    </a>
+    <a href="/software/building-ledger/" class="btn-ghost">
+      Read the build story
+      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>
+    Ledger is open source software. Self-hosted, no authentication layer, designed for a trusted local network.
+    &nbsp;·&nbsp;
+    <a href="https://github.com/panderson54/ledger_finance" target="_blank" rel="noopener">GitHub</a>
+    &nbsp;·&nbsp;
+    <a href="/">pmanderson.dev</a>
+  </p>
+</footer>
+
+</body>
+</html>
